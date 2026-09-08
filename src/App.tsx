@@ -1,9 +1,30 @@
+import alertTriangleIcon from "./assets/icons/alert-triangle.svg";
+import buildingIcon from "./assets/icons/building.svg";
+import calendarIcon from "./assets/icons/calendar.svg";
+import chartUpIcon from "./assets/icons/chart-up.svg";
+import chevronDownIcon from "./assets/icons/chevron-down.svg";
+import folderBlueIcon from "./assets/icons/folder-blue.svg";
+import folderGreenIcon from "./assets/icons/folder-green.svg";
+import folderOrangeIcon from "./assets/icons/folder-orange.svg";
+import folderPurpleIcon from "./assets/icons/folder-purple.svg";
+import folderRedIcon from "./assets/icons/folder-red.svg";
+import guideIcon from "./assets/icons/guide.svg";
+import infoCircleIcon from "./assets/icons/info-circle.svg";
+import navAnalysisIcon from "./assets/icons/nav-analysis.svg";
+import navDashboardIcon from "./assets/icons/nav-dashboard.svg";
+import navPolicyIcon from "./assets/icons/nav-policy.svg";
+import navSettingsIcon from "./assets/icons/nav-settings.svg";
+import reportIcon from "./assets/icons/report.svg";
+import sadFaceIcon from "./assets/icons/sad-face.svg";
+import userHomeIcon from "./assets/icons/user-home.svg";
+import logoImage from "./assets/images/logo.png";
+
 const summaryCards = [
-  { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue" },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↑ 1개", tone: "red" },
-  { label: "주의 상권", value: "6", unit: "개", note: "전분기 대비 -", tone: "amber" },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 1개", tone: "green" },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 3.5개", tone: "violet" }
+  { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue", folderIcon: folderBlueIcon, icon: sadFaceIcon },
+  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↑ 1개", tone: "red", folderIcon: folderRedIcon, icon: sadFaceIcon },
+  { label: "주의 상권", value: "6", unit: "개", note: "전분기 대비 -", tone: "amber", folderIcon: folderOrangeIcon, icon: alertTriangleIcon },
+  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 1개", tone: "green", folderIcon: folderGreenIcon, icon: infoCircleIcon },
+  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 3.5개", tone: "violet", folderIcon: folderPurpleIcon, icon: chartUpIcon }
 ];
 
 const riskRows = [
@@ -32,17 +53,20 @@ const indicators = [
 ];
 
 const policyItems = [
-  ["👥", "방문객 활성화 지원", "지역축제, 상권 공동마케팅, 관광 연계 지원", "우선"],
-  ["💼", "업종전환 컨설팅 지원", "업종 진단 컨설팅, 창업 사전정보 제공", "우선"],
-  ["📈", "초기 창업자 성장 지원", "경영교육, 금융지원, 멘토링 프로그램", "일반"]
+  [userHomeIcon, "방문객 활성화 지원", "지역축제, 상권 공동마케팅, 관광 연계 지원", "우선"],
+  [buildingIcon, "업종전환 컨설팅 지원", "업종 진단 컨설팅, 창업 사전정보 제공", "우선"],
+  [chartUpIcon, "초기 창업자 성장 지원", "경영교육, 금융지원, 멘토링 프로그램", "일반"]
 ];
+
+const nowonMapUrl =
+  "https://www.openstreetmap.org/export/embed.html?bbox=127.045%2C37.615%2C127.115%2C37.705&layer=mapnik&marker=37.6542%2C127.0568";
 
 function App() {
   return (
     <main className="dashboard">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">▥</div>
+          <img className="brand-mark" src={logoImage} alt="" />
           <div>
             <strong>상권정책</strong>
             <span>의사결정 지원 시스템</span>
@@ -51,22 +75,25 @@ function App() {
 
         <nav className="nav-menu" aria-label="주요 메뉴">
           <a className="active" href="/">
-            <span>⌂</span> 대시보드
+            <Icon src={navDashboardIcon} alt="" /> 대시보드
           </a>
           <a href="/">
-            <span>⌕</span> 상권 분석
+            <Icon src={navAnalysisIcon} alt="" /> 상권 분석
           </a>
           <a href="/">
-            <span>□</span> 정책 관리
+            <Icon src={navPolicyIcon} alt="" /> 정책 관리
           </a>
           <a href="/">
-            <span>⚙</span> 설정
+            <Icon src={navSettingsIcon} alt="" /> 설정
           </a>
         </nav>
 
         <div className="sidebar-footer">
           <button className="guide-button" type="button">
-            <span>?</span> 사용자 가이드 <b>›</b>
+            <span>
+              <Icon src={guideIcon} alt="" />
+            </span>
+            사용자 가이드 <b>›</b>
           </button>
           <div className="contact">
             <strong>상권정책 문의</strong>
@@ -83,16 +110,27 @@ function App() {
             <p>행정동별 상권 위험도와 주요 지표를 한눈에 확인하고 정책 대상 지역을 선정하세요.</p>
           </div>
           <div className="filters">
-            <button type="button">노원구⌄</button>
-            <button type="button">전체 행정동⌄</button>
-            <button type="button">2024년 ▫</button>
+            <button type="button">
+              노원구
+              <Icon src={chevronDownIcon} alt="" />
+            </button>
+            <button type="button">
+              전체 행정동
+              <Icon src={chevronDownIcon} alt="" />
+            </button>
+            <button type="button">
+              2024년
+              <Icon src={calendarIcon} alt="" />
+            </button>
             <button className="profile" type="button">
-              <span>⌂</span>
+              <span>
+                <Icon src={userHomeIcon} alt="" />
+              </span>
               <span>
                 <b>노원구청</b>
                 <small>상권정책 담당자</small>
               </span>
-              ⌄
+              <Icon src={chevronDownIcon} alt="" />
             </button>
           </div>
         </header>
@@ -102,9 +140,11 @@ function App() {
             <div className="summary-row">
               {summaryCards.map((card) => (
                 <article className={`summary-card ${card.tone}`} key={`${card.label}-${card.tone}`}>
-                  <div className="folder-tab" />
+                  <img className="folder-tab" src={card.folderIcon} alt="" />
                   <div className="summary-body">
-                    <div className="summary-icon">☹</div>
+                    <div className="summary-icon">
+                      <Icon src={card.icon} alt="" />
+                    </div>
                     <div>
                       <span>{card.label}</span>
                       <strong>
@@ -133,19 +173,15 @@ function App() {
                   </span>
                 </div>
                 <div className="map">
-                  {["상계10동", "공릉2동", "중계1동", "상계6,7동", "상계동", "하계1동", "월계1동", "공릉1동", "중계4동", "월계2동", "중계본동", "하계2동"].map(
-                    (district, index) => (
-                      <span className={`district d${index + 1}`} key={district}>
-                        {district}
-                      </span>
-                    )
-                  )}
-                  <button className="zoom plus" type="button">
-                    +
-                  </button>
-                  <button className="zoom minus" type="button">
-                    −
-                  </button>
+                  <iframe title="노원구 지도" src={nowonMapUrl} loading="lazy" />
+                  <a
+                    className="map-link"
+                    href="https://www.openstreetmap.org/relation/2297417"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    노원구 지도 열기
+                  </a>
                 </div>
               </article>
 
@@ -226,7 +262,9 @@ function App() {
               <div className="policy-list">
                 {policyItems.map(([icon, title, desc, grade]) => (
                   <div className="policy-item" key={title}>
-                    <span>{icon}</span>
+                    <span>
+                      <Icon src={icon} alt="" />
+                    </span>
                     <div>
                       <strong>{title}</strong>
                       <p>{desc}</p>
@@ -236,7 +274,8 @@ function App() {
                 ))}
               </div>
               <button className="report-button" type="button">
-                ▫ 보고서 생성
+                <Icon src={reportIcon} alt="" />
+                보고서 생성
               </button>
             </article>
           </aside>
@@ -244,6 +283,10 @@ function App() {
       </section>
     </main>
   );
+}
+
+function Icon({ src, alt }: { src: string; alt: string }) {
+  return <img className="icon" src={src} alt={alt} aria-hidden={alt ? undefined : true} />;
 }
 
 function PanelTitle({ title, subtitle, action }: { title: string; subtitle?: string; action?: string }) {
