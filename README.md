@@ -1,12 +1,16 @@
 # Re-Store FE
 
-React Native app powered by Expo.
+React web app powered by Vite.
 
 ## Start
 
 ```bash
 npm install
-npm run start
+npm run dev
 ```
 
-If you test on a physical Android device, replace `extra.apiBaseUrl` in `app.json` with your computer's LAN IP address, for example `http://192.168.0.10:4000`.
+Create `.env.local` when you need to point the app at a custom backend URL.
+
+```bash
+VITE_API_BASE_URL=http://localhost:4000
+```
