@@ -556,14 +556,16 @@ td {
 }
 
 .risk-gauge {
-  padding: 12px;
+  padding: 14px 16px 16px;
   text-align: center;
 }
 
 .risk-gauge h2 {
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   text-align: left;
-  font-size: 11px;
+  color: #111827;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .risk-gauge h2 span {
@@ -572,8 +574,8 @@ td {
 }
 
 .gauge {
-  width: 170px;
-  height: 96px;
+  width: 216px;
+  height: 118px;
   position: relative;
   display: grid;
   place-items: end center;
@@ -585,8 +587,8 @@ td {
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  width: 170px;
-  height: 170px;
+  width: 216px;
+  height: 216px;
   border-radius: 50%;
   background: conic-gradient(from 270deg, #22c55e 0 38deg, #facc15 38deg 86deg, #f97316 86deg 128deg, #ef4444 128deg 180deg, transparent 180deg);
 }
@@ -594,9 +596,9 @@ td {
 .gauge::after {
   content: "";
   position: absolute;
-  bottom: -64px;
-  width: 116px;
-  height: 116px;
+  bottom: -80px;
+  width: 146px;
+  height: 146px;
   border-radius: 50%;
   background: #ffffff;
 }
@@ -604,31 +606,21 @@ td {
 .gauge strong {
   position: relative;
   z-index: 1;
-  margin-bottom: 10px;
-  font-size: 30px;
+  margin-bottom: 13px;
+  color: #020817;
+  font-size: 38px;
+  line-height: 1;
 }
 
 .gauge small {
   color: #6a7282;
-  font-size: 12px;
-}
-
-.needle {
-  position: absolute;
-  z-index: 2;
-  bottom: 20px;
-  width: 54px;
-  height: 3px;
-  background: #1e2939;
-  border-radius: 999px;
-  transform: rotate(12deg);
-  transform-origin: right center;
+  font-size: 14px;
 }
 
 .risk-gauge p {
-  margin: 8px 0 0;
+  margin: 12px 0 0;
   color: #99a1af;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .risk-gauge b {
@@ -669,14 +661,15 @@ td {
 .policy-panel {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding: 12px;
+  justify-content: flex-end;
+  min-height: 322px;
+  padding: 16px;
 }
 
 .policy-list {
   display: grid;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .policy-item {
@@ -693,16 +686,13 @@ td {
   place-items: center;
   border-radius: 50%;
   background: #eff6ff;
-}
-
-.policy-item .icon {
-  width: 16px;
-  height: 16px;
+  font-size: 16px;
 }
 
 .policy-item strong {
   color: #1e2939;
   font-size: 11.5px;
+  line-height: 17px;
 }
 
 .policy-item p {
@@ -728,7 +718,7 @@ td {
 
 .report-button {
   width: 100%;
-  height: 40px;
+  height: 49px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -736,7 +726,7 @@ td {
   border-radius: 8px;
   background: #155dfc;
   color: #ffffff;
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 700;
   box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
 }

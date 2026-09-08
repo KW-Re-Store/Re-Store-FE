@@ -1,5 +1,4 @@
 import alertTriangleIcon from "./assets/icons/alert-triangle.svg";
-import buildingIcon from "./assets/icons/building.svg";
 import calendarIcon from "./assets/icons/calendar.svg";
 import chartUpIcon from "./assets/icons/chart-up.svg";
 import chevronDownIcon from "./assets/icons/chevron-down.svg";
@@ -53,9 +52,9 @@ const indicators = [
 ];
 
 const policyItems = [
-  [userHomeIcon, "방문객 활성화 지원", "지역축제, 상권 공동마케팅, 관광 연계 지원", "우선"],
-  [buildingIcon, "업종전환 컨설팅 지원", "업종 진단 컨설팅, 창업 사전정보 제공", "우선"],
-  [chartUpIcon, "초기 창업자 성장 지원", "경영교육, 금융지원, 멘토링 프로그램", "일반"]
+  ["👥", "방문객 활성화 지원", "지역축제, 상권 공동마케팅, 관광 연계 지원", "우선"],
+  ["💼", "업종전환 컨설팅 지원", "업종 진단 컨설팅, 창업 사전정보 제공", "우선"],
+  ["📈", "초기 창업자 성장 지원", "경영교육, 금융지원, 멘토링 프로그램", "일반"]
 ];
 
 const nowonMapUrl =
@@ -234,7 +233,6 @@ function App() {
                 상권 위험지수 <span>노원구 평균</span>
               </h2>
               <div className="gauge">
-                <div className="needle" />
                 <strong>
                   56.7<small>/100</small>
                 </strong>
@@ -262,9 +260,7 @@ function App() {
               <div className="policy-list">
                 {policyItems.map(([icon, title, desc, grade]) => (
                   <div className="policy-item" key={title}>
-                    <span>
-                      <Icon src={icon} alt="" />
-                    </span>
+                    <span>{icon}</span>
                     <div>
                       <strong>{title}</strong>
                       <p>{desc}</p>
