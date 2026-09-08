@@ -247,7 +247,7 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 302px;
   gap: 12px;
-  padding: 12px;
+  padding: 12px 0 12px 12px;
 }
 
 .main-column {
@@ -355,9 +355,7 @@ button {
   gap: 12px;
 }
 
-.panel,
-.risk-gauge,
-.policy-panel {
+.panel {
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   background: #ffffff;
@@ -550,18 +548,21 @@ td {
 }
 
 .side-column {
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  gap: 12px;
+  min-height: calc(100vh - 91px);
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
 }
 
 .risk-gauge {
-  padding: 14px 16px 16px;
+  padding: 12px 10px 16px;
+  border-bottom: 1px solid #f3f4f6;
   text-align: center;
 }
 
 .risk-gauge h2 {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   text-align: left;
   color: #111827;
   font-size: 12px;
@@ -574,8 +575,8 @@ td {
 }
 
 .gauge {
-  width: 216px;
-  height: 118px;
+  width: 210px;
+  height: 108px;
   position: relative;
   display: grid;
   place-items: end center;
@@ -587,8 +588,8 @@ td {
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  width: 216px;
-  height: 216px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   background: conic-gradient(from 270deg, #22c55e 0 38deg, #facc15 38deg 86deg, #f97316 86deg 128deg, #ef4444 128deg 180deg, transparent 180deg);
 }
@@ -597,8 +598,8 @@ td {
   content: "";
   position: absolute;
   bottom: -80px;
-  width: 146px;
-  height: 146px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: #ffffff;
 }
@@ -606,7 +607,7 @@ td {
 .gauge strong {
   position: relative;
   z-index: 1;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
   color: #020817;
   font-size: 38px;
   line-height: 1;
@@ -618,7 +619,7 @@ td {
 }
 
 .risk-gauge p {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   color: #99a1af;
   font-size: 12px;
 }
@@ -631,6 +632,14 @@ td {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
+}
+
+.indicators-panel {
+  padding: 12px 10px 16px;
+  border: 0;
+  border-bottom: 1px solid #f3f4f6;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .indicator-card {
@@ -662,8 +671,10 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  flex: 1;
   min-height: 322px;
-  padding: 16px;
+  padding: 12px 10px;
+  background: #ffffff;
 }
 
 .policy-list {
