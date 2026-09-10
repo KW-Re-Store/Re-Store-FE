@@ -1,0 +1,754 @@
+<frame id="1:4" name="Dashboard 2 - 상권 분석" x="0" y="0" width="1440" height="1274">
+  <frame id="1:5" name="Background+VerticalBorder" x="0" y="0" width="200" height="1080">
+    <frame id="1:6" name="Container" x="0" y="0" width="199" height="79">
+      <frame id="1:7" name="Container" x="20" y="20" width="30" height="39" />
+      <frame id="1:8" name="Paragraph" x="60" y="22" width="95.70931243896484" height="35">
+        <text id="1:9" name="상권정책" x="0" y="0" width="64.0999984741211" height="20" />
+        <text id="1:10" name="의사결정 지원 시스템" x="0" y="20" width="95.70931243896484" height="15" />
+      </frame>
+    </frame>
+    <frame id="1:11" name="Nav" x="0" y="79" width="199" height="212">
+      <frame id="1:12" name="Container" x="0" y="16" width="199" height="45">
+        <frame id="1:13" name="Container" x="20" y="15" width="15" height="15">
+          <frame id="1:14" name="SVG" x="1.130859375" y="0.5899999737739563" width="12.050000190734863" height="13.390000343322754" />
+        </frame>
+        <frame id="1:16" name="Container" x="47" y="12" width="56.17499923706055" height="21">
+          <text id="1:17" name="대시보드" x="0" y="0" width="56.17499923706055" height="21" />
+        </frame>
+      </frame>
+      <frame id="1:18" name="Background" x="0" y="61" width="199" height="45">
+        <frame id="1:19" name="Container" x="20" y="15" width="15" height="15">
+          <frame id="1:20" name="SVG" x="0.689453125" y="0.6899999976158142" width="12.5" height="12.5" />
+        </frame>
+        <frame id="1:22" name="Container" x="47" y="12" width="60.07715606689453" height="21">
+          <text id="1:23" name="상권 분석" x="0" y="0" width="60.07715606689453" height="21" />
+        </frame>
+      </frame>
+      <frame id="1:24" name="Container" x="0" y="106" width="199" height="45">
+        <frame id="1:25" name="Container" x="20" y="15" width="15" height="15">
+          <frame id="1:26" name="SVG" x="0.5899999737739563" y="1.1299999952316284" width="13.390000343322754" height="12.050000190734863" />
+        </frame>
+        <frame id="1:28" name="Container" x="47" y="12" width="60.07715606689453" height="21">
+          <text id="1:29" name="정책 관리" x="0" y="0" width="60.07715606689453" height="21" />
+        </frame>
+      </frame>
+      <frame id="1:30" name="Container" x="0" y="151" width="199" height="45">
+        <frame id="1:31" name="Container" x="20" y="15" width="15" height="15">
+          <frame id="1:32" name="SVG" x="0.560546875" y="0.5600000023841858" width="13.75" height="13.75" />
+        </frame>
+        <frame id="1:34" name="Container" x="47" y="12" width="28.174999237060547" height="21">
+          <text id="1:35" name="설정" x="0" y="0" width="28.174999237060547" height="21" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="1:36" name="Margin" x="0" y="291" width="199" height="789">
+      <frame id="1:37" name="HorizontalBorder" x="0" y="659" width="199" height="130">
+        <frame id="1:38" name="Container" x="20" y="21" width="159" height="24">
+          <frame id="1:39" name="Border" x="0" y="0" width="24" height="24">
+            <frame id="1:40" name="SVG" x="10.220000267028809" y="8.944999694824219" width="3.559999942779541" height="6.110000133514404" />
+          </frame>
+          <frame id="1:42" name="Container" x="32" y="3.5" width="113.53675079345703" height="17">
+            <text id="1:43" name="사용자 가이드" x="0" y="0" width="113.53675079345703" height="17" />
+          </frame>
+          <frame id="1:44" name="Container" x="153.5367431640625" y="0" width="5.463250160217285" height="24">
+            <text id="1:45" name="›" x="0" y="0" width="5.463250160217285" height="24" />
+          </frame>
+        </frame>
+        <frame id="1:46" name="Container" x="20" y="61" width="94" height="49">
+          <text id="1:47" name="상권정책 문의" x="0" y="0" width="62.9761848449707" height="15" />
+          <frame id="1:48" name="Margin" x="0" y="15" width="81.95062255859375" height="19">
+            <text id="1:49" name="📞 02-1234-5678" x="0" y="4" width="81.95062255859375" height="15" />
+          </frame>
+          <text id="1:50" name="✉️ help@nowon.go.kr" x="0" y="34" width="94" height="15" />
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="1:51" name="Container" x="200" y="0" width="1240" height="1274">
+    <frame id="1:52" name="Background+HorizontalBorder" x="0" y="0" width="1240" height="88">
+      <frame id="1:53" name="Container" x="32" y="16" width="402.1770324707031" height="55">
+        <text id="1:54" name="Heading 1 → 상권 분석" x="0" y="0" width="94.2770767211914" height="33" />
+        <frame id="1:55" name="Margin" x="0" y="33" width="402.1770324707031" height="22">
+          <text id="1:56" name="선택한 행정동의 상권 현황과 폐업 원인을 분석하고 인사이트를 제공합니다." x="0" y="4" width="402.1770324707031" height="18" />
+        </frame>
+      </frame>
+      <frame id="1:57" name="Background+Border" x="1038.8262939453125" y="22.5" width="169.17372131347656" height="42">
+        <frame id="1:58" name="Background" x="17" y="7" width="28" height="28">
+          <frame id="1:59" name="SVG" x="7.78000020980835" y="7" width="12.4399995803833" height="14" />
+        </frame>
+        <frame id="1:61" name="Paragraph" x="57" y="7.5" width="72.89371490478516" height="27">
+          <text id="1:62" name="노원구청" x="0" y="0" width="48.150001525878906" height="12" />
+          <text id="1:63" name="상권정책 담당자" x="0" y="12" width="72.89371490478516" height="15" />
+        </frame>
+        <frame id="1:64" name="SVG" x="141.89370727539062" y="18.43000030517578" width="10.279999732971191" height="5.139999866485596" />
+      </frame>
+    </frame>
+    <frame id="1:66" name="Container" x="0" y="88" width="1240" height="1186">
+      <frame id="1:67" name="Container" x="24" y="24" width="1192" height="38">
+        <frame id="1:68" name="Background+Border" x="854.7880249023438" y="0" width="179.42410278320312" height="38">
+          <frame id="1:69" name="SVG" x="17" y="12.5" width="13" height="13" />
+          <frame id="1:71" name="Container" x="38" y="9" width="124.42411041259766" height="20">
+            <text id="1:72" name="PDF 보고서 다운로드" x="0" y="0" width="124.42411041259766" height="20" />
+          </frame>
+        </frame>
+        <frame id="1:73" name="Background+Border" x="1042.22216796875" y="0" width="149.77786254882812" height="38">
+          <frame id="1:74" name="SVG" x="17" y="12.5" width="13" height="13" />
+          <frame id="1:76" name="Container" x="38" y="9" width="94.7778549194336" height="20">
+            <text id="1:77" name="데이터 내보내기" x="0" y="0" width="94.7778549194336" height="20" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="1:78" name="Container" x="24" y="86" width="1192" height="282">
+        <frame id="1:79" name="Background+Border" x="0" y="0" width="564" height="282">
+          <frame id="1:80" name="Container" x="1" y="1" width="562" height="56">
+            <frame id="1:81" name="Container" x="16" y="16" width="194.98585510253906" height="24">
+              <frame id="1:82" name="Heading 3" x="0" y="0" width="138.79835510253906" height="24">
+                <text id="1:83" name="상계10동 상권 개요" x="0" y="0" width="138.79835510253906" height="24" />
+              </frame>
+              <frame id="1:84" name="Background+Border" x="146.79835510253906" y="1.5" width="48.1875" height="21">
+                <text id="1:85" name="고위험" x="9" y="3" width="30.1875" height="15" />
+              </frame>
+            </frame>
+            <frame id="1:86" name="Container" x="380.841064453125" y="19.5" width="165.158935546875" height="17">
+              <text id="1:87" name="노원구 내 위험도 1위 (19개 동 중)" x="0" y="0" width="165.158935546875" height="17" />
+            </frame>
+          </frame>
+          <frame id="1:88" name="HorizontalBorder" x="1" y="57" width="562" height="222">
+            <frame id="1:89" name="Background" x="16" y="17" width="180" height="189">
+              <frame id="1:90" name="Margin" x="55.41604995727539" y="45.5" width="69.16790008544922" height="21">
+                <text id="1:91" name="상권 위험지수" x="0" y="0" width="69.16790008544922" height="17" />
+              </frame>
+              <frame id="1:92" name="Paragraph" x="32.44475173950195" y="66.5" width="115.1104965209961" height="36">
+                <text id="1:93" name="82.4" x="0" y="0" width="83.1104965209961" height="36" />
+                <text id="1:94" name="/100" x="87.1104965209961" y="15" width="28" height="21" />
+              </frame>
+              <frame id="1:95" name="Margin" x="29.178627014160156" y="102.5" width="121.64274597167969" height="41">
+                <frame id="1:96" name="Overlay" x="0" y="16" width="121.64274597167969" height="25">
+                  <frame id="1:97" name="Container" x="8" y="4" width="58.24143981933594" height="17">
+                    <text id="1:98" name="전분기 대비" x="0" y="0" width="58.24143981933594" height="17" />
+                  </frame>
+                  <frame id="1:99" name="SVG" x="70.24143981933594" y="10.434999465942383" width="6.880000114440918" height="4.130000114440918" />
+                  <frame id="1:101" name="Container" x="81.1214370727539" y="4" width="32.52130889892578" height="17">
+                    <text id="1:102" name="12.6점" x="0" y="0" width="32.52130889892578" height="17" />
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="1:103" name="Container" x="212" y="17" width="334" height="189">
+              <frame id="1:104" name="Background+Border" x="0" y="0" width="171" height="88.5">
+                <frame id="1:105" name="Container" x="13" y="13" width="145" height="17">
+                  <text id="1:106" name="폐업률" x="0" y="0" width="145" height="17" />
+                </frame>
+                <frame id="1:107" name="Container" x="13" y="30" width="145" height="27">
+                  <text id="1:108" name="12.4%" x="0" y="0" width="145" height="27" />
+                </frame>
+                <frame id="1:109" name="Container" x="13" y="57" width="145" height="19">
+                  <text id="1:110" name="▲ 3.1%p" x="0" y="4" width="145" height="15" />
+                </frame>
+              </frame>
+              <frame id="1:111" name="Background+Border" x="183" y="0" width="171" height="88.5">
+                <frame id="1:112" name="Container" x="13" y="13" width="145" height="17">
+                  <text id="1:113" name="매출액 증감률" x="0" y="0" width="145" height="17" />
+                </frame>
+                <frame id="1:114" name="Container" x="13" y="30" width="145" height="27">
+                  <text id="1:115" name="-7.6%" x="0" y="0" width="145" height="27" />
+                </frame>
+                <frame id="1:116" name="Container" x="13" y="57" width="145" height="19">
+                  <text id="1:117" name="▼ 2.8%p" x="0" y="4" width="145" height="15" />
+                </frame>
+              </frame>
+              <frame id="1:118" name="Background+Border" x="0" y="100.5" width="171" height="88.5">
+                <frame id="1:119" name="Container" x="13" y="13" width="145" height="17">
+                  <text id="1:120" name="유동인구 증감률" x="0" y="0" width="145" height="17" />
+                </frame>
+                <frame id="1:121" name="Container" x="13" y="30" width="145" height="27">
+                  <text id="1:122" name="-9.3%" x="0" y="0" width="145" height="27" />
+                </frame>
+                <frame id="1:123" name="Container" x="13" y="57" width="145" height="19">
+                  <text id="1:124" name="▼ 4.2%p" x="0" y="4" width="145" height="15" />
+                </frame>
+              </frame>
+              <frame id="1:125" name="Background+Border" x="183" y="100.5" width="171" height="88.5">
+                <frame id="1:126" name="Container" x="13" y="13" width="145" height="17">
+                  <text id="1:127" name="공실률" x="0" y="0" width="145" height="17" />
+                </frame>
+                <frame id="1:128" name="Container" x="13" y="30" width="145" height="27">
+                  <text id="1:129" name="12.7%" x="0" y="0" width="145" height="27" />
+                </frame>
+                <frame id="1:130" name="Container" x="13" y="57" width="145" height="19">
+                  <text id="1:131" name="▲ 1.9%p" x="0" y="4" width="145" height="15" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="1:132" name="Background+Border" x="588" y="0" width="604" height="282">
+          <frame id="1:133" name="Margin" x="21" y="21" width="562" height="40">
+            <frame id="1:134" name="Container" x="0" y="0" width="562" height="24">
+              <frame id="1:135" name="Heading 3" x="0" y="0" width="562" height="24">
+                <text id="1:136" name="주요 지표 추이" x="0" y="0" width="562" height="24" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="1:137" name="Container" x="21" y="61" width="562" height="200">
+            <frame id="1:138" name="Container" x="0" y="0" width="562" height="200">
+              <frame id="1:139" name="SVG" x="0" y="0" width="542" height="200">
+                <frame id="1:140" name="SVG" x="0" y="0" width="542" height="200">
+                  <frame id="1:141" name="Group" x="16" y="24" width="506" height="152">
+                    <frame id="1:142" name="Group" x="16" y="24" width="506" height="152">
+                      <frame id="1:143" name="Group" x="40" y="24" width="482" height="136">
+                        <frame id="1:144" name="Group" x="67.8499984741211" y="24" width="426.2999267578125" height="136">
+                          <vector id="1:145" name="Vector" x="67.8499984741211" y="24" width="0" height="136" />
+                          <vector id="1:146" name="Vector" x="121.13999938964844" y="24" width="0" height="136" />
+                          <vector id="1:147" name="Vector" x="174.42999267578125" y="24" width="0" height="136" />
+                          <vector id="1:148" name="Vector" x="227.71001434326172" y="24" width="0" height="136" />
+                          <vector id="1:149" name="Vector" x="280.99999237060547" y="24" width="0" height="136" />
+                          <vector id="1:150" name="Vector" x="334.29000091552734" y="24" width="0" height="136" />
+                          <vector id="1:151" name="Vector" x="387.5799789428711" y="24" width="0" height="136" />
+                          <vector id="1:152" name="Vector" x="440.85997772216797" y="24" width="0" height="136" />
+                          <vector id="1:153" name="Vector" x="494.14998626708984" y="24" width="0" height="136" />
+                        </frame>
+                        <frame id="1:154" name="Group" x="40" y="34.54999923706055" width="482" height="123.11000061035156">
+                          <vector id="1:155" name="Vector" x="40" y="157.6599998474121" width="482" height="0" />
+                          <vector id="1:156" name="Vector" x="40" y="116.6200065612793" width="482" height="0" />
+                          <vector id="1:157" name="Vector" x="40" y="34.54999923706055" width="482" height="0" />
+                        </frame>
+                      </frame>
+                      <frame id="1:158" name="Group" x="40" y="75.58999633789062" width="482" height="0">
+                        <vector id="1:159" name="Vector" x="40" y="75.58999633789062" width="482" height="0" />
+                      </frame>
+                      <frame id="1:160" name="Group" x="40" y="24" width="482" height="136">
+                        <frame id="1:161" name="Clip path group" x="40" y="24" width="482" height="136">
+                          <frame id="1:162" name="clip7605a0xyplot" x="40" y="24" width="482" height="136">
+                            <vector id="1:163" name="Vector" x="40" y="24" width="482" height="136" />
+                          </frame>
+                          <frame id="1:164" name="Group" x="64.8499984741211" y="31.549999237060547" width="432.2999267578125" height="120.89999389648438">
+                            <frame id="1:165" name="Group" x="64.8499984741211" y="31.549999237060547" width="432.2999267578125" height="120.89999389648438">
+                              <frame id="1:166" name="Group" x="64.8499984741211" y="31.549999237060547" width="432.2999267578125" height="47.040008544921875">
+                                <frame id="1:167" name="Group" x="67.8499984741211" y="34.54999923706055" width="426.29998779296875" height="41.040000915527344">
+                                  <vector id="1:168" name="Vector" x="67.85000038146973" y="34.55000019073486" width="426.29998779296875" height="41.040000915527344" />
+                                </frame>
+                                <frame id="1:169" name="Group" x="64.8499984741211" y="31.549999237060547" width="432.2999267578125" height="47.040008544921875">
+                                  <vector id="1:170" name="Vector" x="64.8499984741211" y="72.59000015258789" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:171" name="Vector" x="118.13999938964844" y="68.47999954223633" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:172" name="Vector" x="171.42999267578125" y="64.38000106811523" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:173" name="Vector" x="224.7099838256836" y="60.279998779296875" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:174" name="Vector" x="277.99999237060547" y="56.16999816894531" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:175" name="Vector" x="331.29000091552734" y="47.959999084472656" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:176" name="Vector" x="384.5799789428711" y="39.760000228881836" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:177" name="Vector" x="437.85997772216797" y="35.64999961853027" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:178" name="Vector" x="491.14998626708984" y="31.550000190734863" width="6.000001430511475" height="6.000001430511475" />
+                                </frame>
+                              </frame>
+                              <frame id="1:179" name="Group" x="64.8499984741211" y="64.3800048828125" width="432.2999267578125" height="55.239990234375">
+                                <frame id="1:180" name="Group" x="67.8499984741211" y="67.3800048828125" width="426.29998779296875" height="49.2400016784668">
+                                  <vector id="1:181" name="Vector" x="67.85000038146973" y="67.38000106811523" width="426.29998779296875" height="49.2400016784668" />
+                                </frame>
+                                <frame id="1:182" name="Group" x="64.8499984741211" y="64.3800048828125" width="432.2999267578125" height="55.239990234375">
+                                  <vector id="1:183" name="Vector" x="64.8499984741211" y="64.38000106811523" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:184" name="Vector" x="118.13999938964844" y="72.59000015258789" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:185" name="Vector" x="171.42999267578125" y="80.79000091552734" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:186" name="Vector" x="224.7099838256836" y="89" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:187" name="Vector" x="277.99999237060547" y="76.68999862670898" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:188" name="Vector" x="331.29000091552734" y="93.0999984741211" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:189" name="Vector" x="384.5799789428711" y="105.41000366210938" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:190" name="Vector" x="437.85997772216797" y="113.62000274658203" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:191" name="Vector" x="491.14998626708984" y="101.30999755859375" width="6.000001430511475" height="6.000001430511475" />
+                                </frame>
+                              </frame>
+                              <frame id="1:192" name="Group" x="64.8499984741211" y="93.0999984741211" width="432.2999267578125" height="59.350006103515625">
+                                <frame id="1:193" name="Group" x="67.8499984741211" y="96.0999984741211" width="426.29998779296875" height="53.349998474121094">
+                                  <vector id="1:194" name="Vector" x="67.85000038146973" y="96.0999984741211" width="426.29998779296875" height="53.349998474121094" />
+                                </frame>
+                                <frame id="1:195" name="Group" x="64.8499984741211" y="93.0999984741211" width="432.2999267578125" height="59.350006103515625">
+                                  <vector id="1:196" name="Vector" x="64.8499984741211" y="93.0999984741211" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:197" name="Vector" x="118.13999938964844" y="97.20999908447266" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:198" name="Vector" x="171.42999267578125" y="105.41000366210938" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:199" name="Vector" x="224.7099838256836" y="113.62000274658203" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:200" name="Vector" x="277.99999237060547" y="109.5199966430664" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:201" name="Vector" x="331.29000091552734" y="121.83000183105469" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:202" name="Vector" x="384.5799789428711" y="134.13999938964844" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:203" name="Vector" x="437.85997772216797" y="146.4499969482422" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:204" name="Vector" x="491.14998626708984" y="138.23999786376953" width="6.000001430511475" height="6.000001430511475" />
+                                </frame>
+                              </frame>
+                              <frame id="1:205" name="Group" x="64.8499984741211" y="80.79000091552734" width="432.2999267578125" height="71.66000366210938">
+                                <frame id="1:206" name="Group" x="67.8499984741211" y="83.79000091552734" width="426.29998779296875" height="65.65999603271484">
+                                  <vector id="1:207" name="Vector" x="67.85000038146973" y="83.79000091552734" width="426.29998779296875" height="65.65999603271484" />
+                                </frame>
+                                <frame id="1:208" name="Group" x="64.8499984741211" y="80.79000091552734" width="432.2999267578125" height="71.66000366210938">
+                                  <vector id="1:209" name="Vector" x="64.8499984741211" y="80.79000091552734" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:210" name="Vector" x="118.13999938964844" y="89" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:211" name="Vector" x="171.42999267578125" y="97.20999908447266" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:212" name="Vector" x="224.7099838256836" y="105.41000366210938" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:213" name="Vector" x="277.99999237060547" y="113.62000274658203" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:214" name="Vector" x="331.29000091552734" y="121.83000183105469" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:215" name="Vector" x="384.5799789428711" y="130.04000091552734" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:216" name="Vector" x="437.85997772216797" y="138.23999786376953" width="6.000001430511475" height="6.000001430511475" />
+                                  <vector id="1:217" name="Vector" x="491.14998626708984" y="146.4499969482422" width="6.000001430511475" height="6.000001430511475" />
+                                </frame>
+                              </frame>
+                            </frame>
+                          </frame>
+                        </frame>
+                      </frame>
+                      <frame id="1:218" name="Group" x="50.349998474121094" y="161" width="461.2999267578125" height="15">
+                        <frame id="1:219" name="Group" x="50.349998474121094" y="161" width="35" height="15">
+                          <text id="1:220" name="&#39;22.1Q" x="50.349998474121094" y="161" width="35" height="15" />
+                        </frame>
+                        <frame id="1:221" name="Group" x="102.63999938964844" y="161" width="37" height="15">
+                          <text id="1:222" name="&#39;22.2Q" x="102.63999938964844" y="161" width="37" height="15" />
+                        </frame>
+                        <frame id="1:223" name="Group" x="155.92999267578125" y="161" width="37" height="15">
+                          <text id="1:224" name="&#39;22.3Q" x="155.92999267578125" y="161" width="37" height="15" />
+                        </frame>
+                        <frame id="1:225" name="Group" x="208.71001434326172" y="161" width="38" height="15">
+                          <text id="1:226" name="&#39;22.4Q" x="208.71001434326172" y="161" width="38" height="15" />
+                        </frame>
+                        <frame id="1:227" name="Group" x="263.49999237060547" y="161" width="35" height="15">
+                          <text id="1:228" name="&#39;23.1Q" x="263.49999237060547" y="161" width="35" height="15" />
+                        </frame>
+                        <frame id="1:229" name="Group" x="315.29000091552734" y="161" width="38" height="15">
+                          <text id="1:230" name="&#39;23.2Q" x="315.29000091552734" y="161" width="38" height="15" />
+                        </frame>
+                        <frame id="1:231" name="Group" x="368.5799789428711" y="161" width="38" height="15">
+                          <text id="1:232" name="&#39;23.3Q" x="368.5799789428711" y="161" width="38" height="15" />
+                        </frame>
+                        <frame id="1:233" name="Group" x="421.85997772216797" y="161" width="38" height="15">
+                          <text id="1:234" name="&#39;23.4Q" x="421.85997772216797" y="161" width="38" height="15" />
+                        </frame>
+                        <frame id="1:235" name="Group" x="476.64998626708984" y="161" width="35" height="15">
+                          <text id="1:236" name="&#39;24.1Q" x="476.64998626708984" y="161" width="35" height="15" />
+                        </frame>
+                      </frame>
+                      <frame id="1:237" name="Group" x="16" y="26.75" width="23" height="138.11000061035156">
+                        <frame id="1:238" name="Group" x="16" y="149.86000061035156" width="23" height="15">
+                          <text id="1:239" name="−20" x="16" y="149.86000061035156" width="23" height="15" />
+                        </frame>
+                        <frame id="1:240" name="Group" x="18" y="108.81999969482422" width="21" height="15">
+                          <text id="1:241" name="−10" x="18" y="108.81999969482422" width="21" height="15" />
+                        </frame>
+                        <frame id="1:242" name="Group" x="31" y="67.79000091552734" width="8" height="15">
+                          <text id="1:243" name="0" x="31" y="67.79000091552734" width="8" height="15" />
+                        </frame>
+                        <frame id="1:244" name="Group" x="25" y="26.75" width="14" height="15">
+                          <text id="1:245" name="10" x="25" y="26.75" width="14" height="15" />
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:246" name="SVG" x="0" y="0" width="542" height="200">
+                <frame id="1:247" name="Group" x="40" y="10.399999618530273" width="484" height="29">
+                  <frame id="1:248" name="Group" x="40" y="10.399999618530273" width="484" height="29">
+                    <vector id="1:249" name="Vector" x="40" y="10.399999618530273" width="484" height="29" />
+                    <frame id="1:250" name="Clip path group" x="40" y="10.399999618530273" width="484" height="29">
+                      <frame id="1:251" name="legend7605a0" x="40" y="10.399999618530273" width="484" height="29">
+                        <vector id="1:252" name="Vector" x="40" y="10.399999618530273" width="484" height="29" />
+                      </frame>
+                      <frame id="1:253" name="Group" x="45" y="18.799999237060547" width="468.25" height="12">
+                        <frame id="1:254" name="Group" x="45" y="18.799999237060547" width="468.25" height="12">
+                          <frame id="1:255" name="Group" x="45" y="18.799999237060547" width="78" height="12">
+                            <text id="1:256" name="폐업률(%)" x="80" y="18.799999713897705" width="43" height="12" />
+                            <frame id="1:257" name="Group" x="45" y="21.899999618530273" width="30" height="6.000001430511475" />
+                          </frame>
+                          <frame id="1:263" name="Group" x="135.5625" y="18.799999237060547" width="109" height="12">
+                            <text id="1:264" name="매출액 증감률(%)" x="170.5625" y="18.799999713897705" width="74" height="12" />
+                            <frame id="1:265" name="Group" x="135.5625" y="21.899999618530273" width="30" height="6.000001430511475" />
+                          </frame>
+                          <frame id="1:271" name="Group" x="258.906005859375" y="18.799999237060547" width="118" height="12">
+                            <text id="1:272" name="유동인구 증감률(%)" x="293.906005859375" y="18.799999713897705" width="83" height="12" />
+                            <frame id="1:273" name="Group" x="258.906005859375" y="21.899999618530273" width="30" height="6.000001430511475" />
+                          </frame>
+                          <frame id="1:279" name="Group" x="392.25" y="18.799999237060547" width="121" height="12">
+                            <text id="1:280" name="신규 창업 증감률(%)" x="427.25" y="18.799999713897705" width="86" height="12" />
+                            <frame id="1:281" name="Group" x="392.25" y="21.899999618530273" width="30" height="6.000001430511475" />
+                          </frame>
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:287" name="SVG" x="0" y="0" width="542" height="200" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="1:288" name="Container" x="24" y="392" width="1192" height="335">
+        <frame id="1:289" name="Background+Border" x="0" y="0" width="564" height="334.5">
+          <frame id="1:290" name="HorizontalBorder" x="1" y="1" width="562" height="57">
+            <frame id="1:291" name="Heading 3" x="16" y="16" width="530" height="24">
+              <text id="1:292" name="상권 현황" x="0" y="0" width="530" height="24" />
+            </frame>
+          </frame>
+          <frame id="1:293" name="Container" x="1" y="58" width="562" height="275.5">
+            <frame id="1:294" name="Background+VerticalBorder" x="0" y="0" width="300" height="275.5">
+              <frame id="1:295" name="Container" x="0" y="0" width="299" height="275.5" />
+              <frame id="1:296" name="Overlay+Border+Shadow+OverlayBlur" x="14" y="11" width="96.94493103027344" height="107.75">
+                <text id="1:297" name="상권 유형" x="13" y="13" width="47.20706558227539" height="17" />
+                <frame id="1:298" name="Container" x="13" y="37.75" width="70.94493103027344" height="57">
+                  <frame id="1:299" name="Container" x="0" y="0" width="70.94493103027344" height="15">
+                    <rounded-rectangle id="1:300" name="Background" x="0" y="2.5" width="10" height="10" />
+                    <frame id="1:301" name="Container" x="18" y="0" width="52.9449348449707" height="15">
+                      <text id="1:302" name="주거지 상권" x="0" y="0" width="52.9449348449707" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="1:303" name="Container" x="0" y="21" width="70.94493103027344" height="15">
+                    <rounded-rectangle id="1:304" name="Background" x="0" y="2.5" width="10" height="10" />
+                    <frame id="1:305" name="Container" x="18" y="0" width="42.9136848449707" height="15">
+                      <text id="1:306" name="골목 상권" x="0" y="0" width="42.9136848449707" height="15" />
+                    </frame>
+                  </frame>
+                  <frame id="1:307" name="Container" x="0" y="42" width="70.94493103027344" height="15">
+                    <rounded-rectangle id="1:308" name="Background" x="0" y="2.5" width="10" height="10" />
+                    <frame id="1:309" name="Container" x="18" y="0" width="52.9449348449707" height="15">
+                      <text id="1:310" name="역세권 상권" x="0" y="0" width="52.9449348449707" height="15" />
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="1:311" name="Background" x="300" y="0" width="262" height="275.5">
+              <frame id="1:312" name="Container" x="20" y="20" width="222" height="36">
+                <frame id="1:313" name="Container" x="0" y="0" width="222" height="15">
+                  <text id="1:314" name="면적" x="0" y="0" width="222" height="15" />
+                </frame>
+                <frame id="1:315" name="Container" x="0" y="15" width="222" height="21">
+                  <text id="1:316" name="1.21km²" x="0" y="0" width="222" height="21" />
+                </frame>
+              </frame>
+              <frame id="1:317" name="Container" x="20" y="76" width="222" height="36">
+                <frame id="1:318" name="Container" x="0" y="0" width="222" height="15">
+                  <text id="1:319" name="점포 수" x="0" y="0" width="222" height="15" />
+                </frame>
+                <frame id="1:320" name="Container" x="0" y="15" width="222" height="21">
+                  <text id="1:321" name="1,842개" x="0" y="0" width="222" height="21" />
+                </frame>
+              </frame>
+              <frame id="1:322" name="Container" x="20" y="132" width="222" height="36">
+                <frame id="1:323" name="Container" x="0" y="0" width="222" height="15">
+                  <text id="1:324" name="유동인구 (일평균)" x="0" y="0" width="222" height="15" />
+                </frame>
+                <frame id="1:325" name="Container" x="0" y="15" width="222" height="21">
+                  <text id="1:326" name="29,471명" x="0" y="0" width="222" height="21" />
+                </frame>
+              </frame>
+              <frame id="1:327" name="Container" x="20" y="188" width="222" height="36">
+                <frame id="1:328" name="Container" x="0" y="0" width="222" height="15">
+                  <text id="1:329" name="주요 업종" x="0" y="0" width="222" height="15" />
+                </frame>
+                <frame id="1:330" name="Container" x="0" y="15" width="222" height="21">
+                  <text id="1:331" name="음식업, 서비스업, 소매업" x="0" y="0" width="222" height="21" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="1:332" name="Background+Border" x="588" y="0" width="604" height="335">
+          <frame id="1:333" name="Paragraph" x="21" y="21" width="562" height="24">
+            <text id="1:334" name="Heading 3 → 원인 분석" x="0" y="0" width="68.55695343017578" height="24" />
+            <text id="1:335" name="(상위 주요 요인)" x="76.55695343017578" y="4" width="94.03670501708984" height="20" />
+          </frame>
+          <frame id="1:336" name="Container" x="21" y="61" width="562" height="220">
+            <frame id="1:337" name="Container" x="0" y="0" width="562" height="40">
+              <frame id="1:338" name="Background+Border" x="0" y="0" width="40" height="40">
+                <frame id="1:339" name="SVG" x="14" y="13" width="12" height="14" />
+              </frame>
+              <frame id="1:341" name="Container" x="56" y="5" width="506" height="30">
+                <frame id="1:342" name="Container" x="0" y="0" width="506" height="20">
+                  <frame id="1:343" name="Container" x="0" y="0" width="81.7575454711914" height="20">
+                    <text id="1:344" name="유동인구 감소" x="0" y="0" width="81.7575454711914" height="20" />
+                  </frame>
+                  <frame id="1:345" name="Container" x="480" y="1" width="26" height="18">
+                    <text id="1:346" name="87점" x="0" y="0" width="26" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:347" name="Background" x="0" y="24" width="506" height="6">
+                  <rounded-rectangle id="1:348" name="Background" x="0" y="0" width="440.2095947265625" height="6" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="1:349" name="Container" x="0" y="60" width="562" height="40">
+              <frame id="1:350" name="Background+Border" x="0" y="0" width="40" height="40">
+                <frame id="1:351" name="SVG" x="12" y="13" width="16" height="14" />
+              </frame>
+              <frame id="1:353" name="Container" x="56" y="5" width="506" height="30">
+                <frame id="1:354" name="Container" x="0" y="0" width="506" height="20">
+                  <frame id="1:355" name="Container" x="0" y="0" width="68.73722839355469" height="20">
+                    <text id="1:356" name="매출액 감소" x="0" y="0" width="68.73722839355469" height="20" />
+                  </frame>
+                  <frame id="1:357" name="Container" x="480" y="1" width="26" height="18">
+                    <text id="1:358" name="76점" x="0" y="0" width="26" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:359" name="Background" x="0" y="24" width="506" height="6">
+                  <rounded-rectangle id="1:360" name="Background" x="0" y="0" width="384.55999755859375" height="6" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="1:361" name="Container" x="0" y="120" width="562" height="40">
+              <frame id="1:362" name="Background+Border" x="0" y="0" width="40" height="40">
+                <frame id="1:363" name="SVG" x="11.5" y="12" width="17" height="16" />
+              </frame>
+              <frame id="1:365" name="Container" x="56" y="5" width="506" height="30">
+                <frame id="1:366" name="Container" x="0" y="0" width="506" height="20">
+                  <frame id="1:367" name="Container" x="0" y="0" width="55.8038444519043" height="20">
+                    <text id="1:368" name="공실 증가" x="0" y="0" width="55.8038444519043" height="20" />
+                  </frame>
+                  <frame id="1:369" name="Container" x="480" y="1" width="26" height="18">
+                    <text id="1:370" name="68점" x="0" y="0" width="26" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:371" name="Background" x="0" y="24" width="506" height="6">
+                  <rounded-rectangle id="1:372" name="Background" x="0" y="0" width="344.069580078125" height="6" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="1:373" name="Container" x="0" y="180" width="562" height="40">
+              <frame id="1:374" name="Background+Border" x="0" y="0" width="40" height="40">
+                <frame id="1:375" name="SVG" x="12" y="12" width="16" height="16" />
+              </frame>
+              <frame id="1:377" name="Container" x="56" y="5" width="506" height="30">
+                <frame id="1:378" name="Container" x="0" y="0" width="506" height="20">
+                  <frame id="1:379" name="Container" x="0" y="0" width="85.36317443847656" height="20">
+                    <text id="1:380" name="신규 창업 감소" x="0" y="0" width="85.36317443847656" height="20" />
+                  </frame>
+                  <frame id="1:381" name="Container" x="480" y="1" width="26" height="18">
+                    <text id="1:382" name="58점" x="0" y="0" width="26" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:383" name="Background" x="0" y="24" width="506" height="6">
+                  <rounded-rectangle id="1:384" name="Background" x="0" y="0" width="293.4800109863281" height="6" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <frame id="1:385" name="Container" x="21" y="297" width="562" height="17">
+            <text id="1:386" name="* 영향도는 상권 위험지수에 미치는 기여도를 100점 기준으로 산정" x="119.89208984375" y="0" width="322.2158203125" height="17" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="1:387" name="Container" x="24" y="751" width="1192" height="411">
+        <frame id="1:388" name="Background+Border" x="0" y="0" width="768" height="411">
+          <frame id="1:389" name="Margin" x="21" y="21" width="726" height="44">
+            <frame id="1:390" name="Container" x="0" y="0" width="726" height="28">
+              <frame id="1:391" name="Heading 3" x="0" y="2" width="68.55695343017578" height="24">
+                <text id="1:392" name="업종 분석" x="0" y="0" width="68.55695343017578" height="24" />
+              </frame>
+              <frame id="1:393" name="Background+Border" x="594.6882934570312" y="0" width="131.31167602539062" height="28">
+                <frame id="1:394" name="Container" x="13" y="5" width="90.8116683959961" height="18">
+                  <text id="1:395" name="업종 대분류 기준" x="0" y="0" width="90.8116683959961" height="18" />
+                </frame>
+                <frame id="1:396" name="SVG" x="107.8116683959961" y="11" width="10.5" height="6" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="1:398" name="Container" x="21" y="65" width="726" height="273">
+            <frame id="1:399" name="Container" x="0" y="46.5" width="180" height="180">
+              <frame id="1:400" name="Container" x="0" y="0" width="180" height="180">
+                <frame id="1:401" name="Container" x="0" y="0" width="180" height="180">
+                  <frame id="1:402" name="SVG" x="0" y="0" width="180" height="180" />
+                  <frame id="1:413" name="SVG" x="0" y="0" width="180" height="180" />
+                  <frame id="1:414" name="SVG" x="0" y="0" width="180" height="180" />
+                </frame>
+              </frame>
+              <frame id="1:415" name="Container" x="0" y="0" width="180" height="180">
+                <frame id="1:416" name="Container" x="64.2497787475586" y="70.5" width="51.50043869018555" height="18">
+                  <text id="1:417" name="전체 점포" x="0" y="0" width="51.50043869018555" height="18" />
+                </frame>
+                <frame id="1:418" name="Container" x="65" y="88.5" width="50" height="21">
+                  <text id="1:419" name="1,842개" x="0" y="0" width="50" height="21" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="1:420" name="Container" x="220" y="0" width="506" height="273">
+              <frame id="1:421" name="HorizontalBorder" x="0" y="0" width="506" height="35">
+                <frame id="1:422" name="Container" x="0" y="8" width="52.11249923706055" height="18">
+                  <rounded-rectangle id="1:423" name="Background" x="0" y="5" width="8" height="8" />
+                  <frame id="1:424" name="Container" x="16" y="0" width="36.11249923706055" height="18">
+                    <text id="1:425" name="음식업" x="0" y="0" width="36.11249923706055" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:426" name="Container" x="337.3070068359375" y="8" width="168.6929931640625" height="18">
+                  <frame id="1:427" name="Container" x="0" y="0" width="43" height="18">
+                    <text id="1:428" name="1,036개" x="0" y="0" width="43" height="18" />
+                  </frame>
+                  <frame id="1:429" name="Container" x="67" y="0" width="35" height="18">
+                    <text id="1:430" name="56.3%" x="0" y="0" width="35" height="18" />
+                  </frame>
+                  <frame id="1:431" name="Container" x="126" y="0" width="42.69300079345703" height="18">
+                    <text id="1:432" name="▲ 1.2%" x="0" y="0" width="42.69300079345703" height="18" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:433" name="HorizontalBorder" x="0" y="43" width="506" height="35">
+                <frame id="1:434" name="Container" x="0" y="8" width="52.11249923706055" height="18">
+                  <rounded-rectangle id="1:435" name="Background" x="0" y="5" width="8" height="8" />
+                  <frame id="1:436" name="Container" x="16" y="0" width="36.11249923706055" height="18">
+                    <text id="1:437" name="소매업" x="0" y="0" width="36.11249923706055" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:438" name="Container" x="347" y="8" width="159" height="18">
+                  <frame id="1:439" name="Container" x="0" y="0" width="33" height="18">
+                    <text id="1:440" name="412개" x="0" y="0" width="33" height="18" />
+                  </frame>
+                  <frame id="1:441" name="Container" x="57" y="0" width="35" height="18">
+                    <text id="1:442" name="22.4%" x="0" y="0" width="35" height="18" />
+                  </frame>
+                  <frame id="1:443" name="Container" x="116" y="0" width="43" height="18">
+                    <text id="1:444" name="▼ 0.8%" x="0" y="0" width="43" height="18" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:445" name="HorizontalBorder" x="0" y="86" width="506" height="35">
+                <frame id="1:446" name="Container" x="0" y="8" width="64.1500015258789" height="18">
+                  <rounded-rectangle id="1:447" name="Background" x="0" y="5" width="8" height="8" />
+                  <frame id="1:448" name="Container" x="16" y="0" width="48.150001525878906" height="18">
+                    <text id="1:449" name="서비스업" x="0" y="0" width="48.150001525878906" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:450" name="Container" x="347.8636474609375" y="8" width="158.13633728027344" height="18">
+                  <frame id="1:451" name="Container" x="0" y="0" width="33" height="18">
+                    <text id="1:452" name="258개" x="0" y="0" width="33" height="18" />
+                  </frame>
+                  <frame id="1:453" name="Container" x="57" y="0" width="34.1363410949707" height="18">
+                    <text id="1:454" name="14.0%" x="0" y="0" width="34.1363410949707" height="18" />
+                  </frame>
+                  <frame id="1:455" name="Container" x="115.13633728027344" y="0" width="43" height="18">
+                    <text id="1:456" name="▼ 0.3%" x="0" y="0" width="43" height="18" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:457" name="HorizontalBorder" x="0" y="129" width="506" height="35">
+                <frame id="1:458" name="Container" x="0" y="8" width="64.1500015258789" height="18">
+                  <rounded-rectangle id="1:459" name="Background" x="0" y="5" width="8" height="8" />
+                  <frame id="1:460" name="Container" x="16" y="0" width="48.150001525878906" height="18">
+                    <text id="1:461" name="서비스업" x="0" y="0" width="48.150001525878906" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:462" name="Container" x="347.8636474609375" y="8" width="158.13633728027344" height="18">
+                  <frame id="1:463" name="Container" x="0" y="0" width="33" height="18">
+                    <text id="1:464" name="258개" x="0" y="0" width="33" height="18" />
+                  </frame>
+                  <frame id="1:465" name="Container" x="57" y="0" width="34.1363410949707" height="18">
+                    <text id="1:466" name="14.0%" x="0" y="0" width="34.1363410949707" height="18" />
+                  </frame>
+                  <frame id="1:467" name="Container" x="115.13633728027344" y="0" width="43" height="18">
+                    <text id="1:468" name="▼ 0.3%" x="0" y="0" width="43" height="18" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:469" name="HorizontalBorder" x="0" y="172" width="506" height="35">
+                <frame id="1:470" name="Container" x="0" y="8" width="64.1500015258789" height="18">
+                  <rounded-rectangle id="1:471" name="Background" x="0" y="5" width="8" height="8" />
+                  <frame id="1:472" name="Container" x="16" y="0" width="48.150001525878906" height="18">
+                    <text id="1:473" name="서비스업" x="0" y="0" width="48.150001525878906" height="18" />
+                  </frame>
+                </frame>
+                <frame id="1:474" name="Container" x="347.8636474609375" y="8" width="158.13633728027344" height="18">
+                  <frame id="1:475" name="Container" x="0" y="0" width="33" height="18">
+                    <text id="1:476" name="258개" x="0" y="0" width="33" height="18" />
+                  </frame>
+                  <frame id="1:477" name="Container" x="57" y="0" width="34.1363410949707" height="18">
+                    <text id="1:478" name="14.0%" x="0" y="0" width="34.1363410949707" height="18" />
+                  </frame>
+                  <frame id="1:479" name="Container" x="115.13633728027344" y="0" width="43" height="18">
+                    <text id="1:480" name="▼ 0.3%" x="0" y="0" width="43" height="18" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:481" name="Margin" x="0" y="215" width="506" height="58">
+                <frame id="1:482" name="Background+Border" x="0" y="16" width="506" height="42">
+                  <text id="1:483" name="자세히 보기 ›" x="217.6097869873047" y="13" width="70.7804183959961" height="18" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="1:484" name="Container" x="792" y="0" width="400" height="409">
+          <frame id="1:485" name="Background+Border" x="0" y="0" width="400" height="336">
+            <frame id="1:486" name="Heading 3" x="21" y="20" width="358" height="23">
+              <text id="1:487" name="인사이트 요약" x="0" y="0" width="358" height="23" />
+            </frame>
+            <frame id="1:488" name="Container" x="21" y="59" width="358" height="256">
+              <frame id="1:489" name="Container" x="0" y="0" width="358" height="39">
+                <frame id="1:490" name="Margin" x="0" y="0" width="16" height="20">
+                  <frame id="1:491" name="Background" x="0" y="4" width="16" height="16">
+                    <frame id="1:492" name="SVG" x="4.5" y="5.5" width="7" height="5" />
+                  </frame>
+                </frame>
+                <frame id="1:494" name="Container" x="28" y="0" width="330" height="39">
+                  <text id="1:495" name="유동인구 감소가 가장 큰 영향을 주고 있으며, 매출 감소로 이
+어지고 있습니다." x="0" y="-0.75" width="321.3399963378906" height="39" />
+                </frame>
+              </frame>
+              <frame id="1:496" name="Container" x="0" y="51" width="358" height="39">
+                <frame id="1:497" name="Margin" x="0" y="0" width="16" height="20">
+                  <frame id="1:498" name="Background" x="0" y="4" width="16" height="16">
+                    <frame id="1:499" name="SVG" x="4.5" y="5.5" width="7" height="5" />
+                  </frame>
+                </frame>
+                <frame id="1:501" name="Container" x="28" y="0" width="330" height="39">
+                  <text id="1:502" name="유동인구 감소가 가장 큰 영향을 주고 있으며, 매출 감소로 이
+어지고 있습니다." x="0" y="-0.75" width="321.3399963378906" height="39" />
+                </frame>
+              </frame>
+              <frame id="1:503" name="Container" x="0" y="102" width="358" height="39">
+                <frame id="1:504" name="Margin" x="0" y="0" width="16" height="20">
+                  <frame id="1:505" name="Background" x="0" y="4" width="16" height="16">
+                    <frame id="1:506" name="SVG" x="4.5" y="5.5" width="7" height="5" />
+                  </frame>
+                </frame>
+                <frame id="1:508" name="Container" x="28" y="0" width="330" height="39">
+                  <text id="1:509" name="유동인구 감소가 가장 큰 영향을 주고 있으며, 매출 감소로 이
+어지고 있습니다." x="0" y="-0.75" width="321.3399963378906" height="39" />
+                </frame>
+              </frame>
+              <frame id="1:510" name="Container" x="0" y="153" width="358" height="39">
+                <frame id="1:511" name="Margin" x="0" y="0" width="16" height="20">
+                  <frame id="1:512" name="Background" x="0" y="4" width="16" height="16">
+                    <frame id="1:513" name="SVG" x="4.5" y="5.5" width="7" height="5" />
+                  </frame>
+                </frame>
+                <frame id="1:515" name="Container" x="28" y="0" width="330" height="39">
+                  <text id="1:516" name="유동인구 감소가 가장 큰 영향을 주고 있으며, 매출 감소로 이
+어지고 있습니다." x="0" y="-0.75" width="321.3399963378906" height="39" />
+                </frame>
+              </frame>
+              <frame id="1:517" name="Container" x="0" y="204" width="358" height="20">
+                <frame id="1:518" name="Margin" x="0" y="0" width="16" height="20">
+                  <frame id="1:519" name="Background" x="0" y="4" width="16" height="16">
+                    <frame id="1:520" name="SVG" x="4.5" y="5.5" width="7" height="5" />
+                  </frame>
+                </frame>
+                <frame id="1:522" name="Container" x="28" y="0" width="290.6700134277344" height="20">
+                  <text id="1:523" name="음식업 비중이 높아 업종 간 경쟁이 심화된 구조입니다." x="0" y="-1" width="290.7835693359375" height="20" />
+                </frame>
+              </frame>
+              <frame id="1:524" name="Container" x="0" y="236" width="358" height="20">
+                <frame id="1:525" name="Margin" x="0" y="0" width="16" height="20">
+                  <frame id="1:526" name="Background" x="0" y="4" width="16" height="16">
+                    <frame id="1:527" name="SVG" x="4.5" y="5.5" width="7" height="5" />
+                  </frame>
+                </frame>
+                <frame id="1:529" name="Container" x="28" y="0" width="330" height="20">
+                  <text id="1:530" name="신규 창업 감소와 공실 증가로 상권 활력이 저하되고 있습니다." x="0" y="-1" width="330.1488952636719" height="20" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <frame id="1:531" name="Margin" x="0" y="356" width="400" height="53">
+            <frame id="1:532" name="Background" x="0" y="8" width="400" height="45">
+              <frame id="1:533" name="Container" x="144.03829956054688" y="12" width="91.92340850830078" height="21">
+                <text id="1:534" name="정책 추천 보기" x="0" y="0" width="91.92340850830078" height="21" />
+              </frame>
+              <frame id="1:535" name="SVG" x="243.96170043945312" y="17.25" width="12" height="10.5" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+</frame>
