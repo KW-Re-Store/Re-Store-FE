@@ -57,7 +57,7 @@ button {
 .brand-mark {
   width: 30px;
   height: 39px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: left center;
 }
 

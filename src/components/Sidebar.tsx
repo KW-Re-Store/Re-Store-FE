@@ -4,9 +4,9 @@ import guideIcon from "../assets/icons/guide.svg";
 import navAnalysisIcon from "../assets/icons/nav-analysis.svg";
 import navDashboardIcon from "../assets/icons/nav-dashboard.svg";
 import navPolicyIcon from "../assets/icons/nav-policy.svg";
-import navRecommendIcon from "../assets/icons/nav-recommend.svg";
+import navRecommendIcon from "../assets/icons/nav-policy-recommendation.svg";
 import navSettingsIcon from "../assets/icons/nav-settings.svg";
-import logoImage from "../assets/images/logo.png";
+import policyBuildingIcon from "../assets/icons/policy-building.svg";
 import Icon from "./Icon";
 
 const navItems = [
@@ -23,7 +23,7 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="brand">
-        <img className="brand-mark" src={logoImage} alt="" />
+        <img className="brand-mark" src={policyBuildingIcon} alt="" />
         <div>
           <strong>상권정책</strong>
           <span>의사결정 지원 시스템</span>

@@ -2,11 +2,14 @@ import alertTriangleIcon from "../assets/icons/alert-triangle.svg";
 import calendarIcon from "../assets/icons/calendar.svg";
 import chartUpIcon from "../assets/icons/chart-up.svg";
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
+import districtBuildingIcon from "../assets/icons/district-building.svg";
 import folderBlueIcon from "../assets/icons/folder-blue.svg";
 import folderGreenIcon from "../assets/icons/folder-green.svg";
 import folderOrangeIcon from "../assets/icons/folder-orange.svg";
 import folderPurpleIcon from "../assets/icons/folder-purple.svg";
 import folderRedIcon from "../assets/icons/folder-red.svg";
+import highRiskMarketIcon from "../assets/icons/high-risk-market.svg";
+import highRiskTrendIcon from "../assets/icons/high-risk-trend.svg";
 import infoCircleIcon from "../assets/icons/info-circle.svg";
 import reportIcon from "../assets/icons/report.svg";
 import sadFaceIcon from "../assets/icons/sad-face.svg";
@@ -15,11 +18,11 @@ import Icon from "../components/Icon";
 import PanelTitle from "../components/PanelTitle";
 
 const summaryCards = [
-  { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue", folderIcon: folderBlueIcon, icon: sadFaceIcon },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↑ 1개", tone: "red", folderIcon: folderRedIcon, icon: sadFaceIcon },
+  { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue", folderIcon: folderBlueIcon, icon: districtBuildingIcon },
+  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↑ 1개", tone: "red", folderIcon: folderRedIcon, icon: highRiskMarketIcon },
   { label: "주의 상권", value: "6", unit: "개", note: "전분기 대비 -", tone: "amber", folderIcon: folderOrangeIcon, icon: alertTriangleIcon },
   { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 1개", tone: "green", folderIcon: folderGreenIcon, icon: infoCircleIcon },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 3.5개", tone: "violet", folderIcon: folderPurpleIcon, icon: chartUpIcon }
+  { label: "상권 위험지수", value: "4", unit: "개", note: "전분기 대비 ↓ 3.5개", tone: "violet", folderIcon: folderPurpleIcon, icon: highRiskTrendIcon }
 ];
 
 const riskRows = [
