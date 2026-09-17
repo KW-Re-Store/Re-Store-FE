@@ -1,7 +1,5 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
-import dataExportIcon from "../assets/icons/data-export.svg";
 import infoCircleIcon from "../assets/icons/info-circle.svg";
-import pdfDownloadIcon from "../assets/icons/pdf-download.svg";
 import reportIcon from "../assets/icons/report.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import FilterDisplay from "../components/FilterDisplay";
@@ -12,7 +10,6 @@ const kpiCards = [
   { icon: "📁", bg: "#eef2ff", label: "지원 사업 수", value: "12", unit: "개", change: "▲ 2개", tone: "up" },
   { icon: "₩", bg: "#eef8ee", label: "총 예산", value: "8,000", unit: "백만원", change: "▲ 1,000백만원", tone: "up" },
   { icon: "📉", bg: "#fff2e5", label: "폐업률", value: "9.1", unit: "%", change: "▼ 1.6%p", tone: "down" },
-  { icon: "💚", bg: "#f5f3fe", label: "생존율(2년)", value: "61.3", unit: "%", change: "▲ 4.8%p", tone: "up" },
   { icon: "📊", bg: "#eff6fe", label: "매출액 증감률", value: "-2.1", unit: "%", change: "▲ 1.8%p", tone: "up" },
   { icon: "👥", bg: "#eef8ee", label: "유동인구 증감률", value: "+3.8", unit: "%", change: "▲ 0.7%p", tone: "up" }
 ];
@@ -94,14 +91,6 @@ function PolicyManagementPage() {
             </div>
           </div>
         ))}
-        <div className="pm-kpi-card pm-kpi-score">
-          <span className="pm-kpi-icon pm-kpi-grade-icon">B+</span>
-          <div>
-            <span className="label">성과 종합 평가</span>
-            <span className="grade-note">지난해 대비 개선 중</span>
-            <span className="detail-link">상세보기 ›</span>
-          </div>
-        </div>
       </div>
 
       <div className="pm-grid">
@@ -110,13 +99,6 @@ function PolicyManagementPage() {
             <h3>
               주요 지표 추이 <Icon src={infoCircleIcon} alt="" />
             </h3>
-            <div className="pm-tab-group">
-              <button className="active" type="button">
-                분기
-              </button>
-              <button type="button">반기</button>
-              <button type="button">연도</button>
-            </div>
           </div>
           <LineChart
             series={trendSeries}
@@ -203,9 +185,6 @@ function PolicyManagementPage() {
         <article className="pm-panel">
           <div className="pm-panel-head">
             <h3>정책 효과 분석 (지원 전·후 비교)</h3>
-            <span className="pm-panel-select">
-              전체 사업 평균 <Icon src={chevronDownIcon} alt="" />
-            </span>
           </div>
           <div className="pm-effect-summary">
             <span>
@@ -250,12 +229,6 @@ function PolicyManagementPage() {
       </div>
 
       <div className="action-row action-row--bottom">
-        <button className="btn-outline" type="button">
-          <Icon src={pdfDownloadIcon} alt="" /> PDF 다운로드
-        </button>
-        <button className="btn-outline" type="button">
-          <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
-        </button>
         <button className="btn-primary" type="button">
           <Icon src={reportIcon} alt="" /> 성과 보고서 생성
         </button>

@@ -785,7 +785,7 @@ h4 .icon {
 }
 
 .action-row--bottom {
-  padding: 16px 24px 24px;
+  padding: 16px 12px 12px;
 }
 
 .btn-outline {
@@ -947,7 +947,7 @@ h4 .icon {
 .ta-body {
   display: grid;
   gap: 24px;
-  padding: 24px;
+  padding: 12px;
 }
 
 .ta-body .action-row {
@@ -1392,7 +1392,7 @@ h4 .icon {
   grid-template-columns: 2fr 3fr;
   gap: 20px;
   align-items: start;
-  padding: 24px;
+  padding: 12px;
 }
 
 .pr-left {
@@ -1823,9 +1823,9 @@ h4 .icon {
 
 .pm-kpi-row {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 8px;
-  padding: 10px 24px 0;
+  padding: 12px 12px 0;
 }
 
 .pm-kpi-card {
@@ -1911,7 +1911,7 @@ h4 .icon {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 10px 24px 12px;
+  padding: 10px 12px 12px;
 }
 
 .pm-panel {
