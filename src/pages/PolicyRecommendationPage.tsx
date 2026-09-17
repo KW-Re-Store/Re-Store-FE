@@ -1,6 +1,6 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
-import infoCircleIcon from "../assets/icons/info-circle.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
+import FilterDisplay from "../components/FilterDisplay";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
@@ -116,12 +116,11 @@ function PolicyRecommendationPage() {
     <section className="workspace">
       <header className="topbar">
         <div>
-          <h1>
-            정책 추천 <Icon src={infoCircleIcon} alt="" />
-          </h1>
+          <h1>정책 추천</h1>
           <p>분석 결과를 기반으로 상권의 문제를 해결하기 위한 맞춤형 정책을 추천합니다.</p>
         </div>
         <div className="filters">
+          <FilterDisplay />
           <button className="profile" type="button">
             <span>
               <Icon src={userHomeIcon} alt="" />
@@ -137,20 +136,6 @@ function PolicyRecommendationPage() {
 
       <div className="pr-layout">
         <div className="pr-left">
-          <div className="pr-summary-card">
-            <div className="pr-summary-title">
-              <h3>상계10동 분석 요약</h3>
-              <span className="ta-badge-risk">고위험</span>
-            </div>
-            <div className="risk-strip">
-              <span className="risk-strip-label">위험도</span>
-              <span className="risk-strip-value">
-                82.4<small>/100</small>
-              </span>
-              <span className="risk-strip-delta">▲ 12.6점</span>
-            </div>
-          </div>
-
           <article className="pr-sim-card">
             <div className="pr-sim-head">
               <h3>
@@ -218,20 +203,7 @@ function PolicyRecommendationPage() {
 
         <div className="pr-top-panel">
           <div className="pr-top-head">
-            <h3>
-              맞춤 정책 추천 TOP 4 <Icon src={infoCircleIcon} alt="" />
-            </h3>
-            <div className="pr-legend">
-              <span>
-                <i style={{ background: "#ef4444" }} /> 높음
-              </span>
-              <span>
-                <i style={{ background: "#fb923c" }} /> 보통
-              </span>
-              <span>
-                <i style={{ background: "#22c55e" }} /> 낮음
-              </span>
-            </div>
+            <h3>맞춤 정책 추천 TOP 4</h3>
           </div>
           <div className="pr-card-list">
             {recommendedPolicies.map((policy) => (

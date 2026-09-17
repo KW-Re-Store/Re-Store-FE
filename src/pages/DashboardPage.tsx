@@ -16,6 +16,7 @@ import sadFaceIcon from "../assets/icons/sad-face.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import Icon from "../components/Icon";
 import PanelTitle from "../components/PanelTitle";
+import { useFilters } from "../context/FilterContext";
 
 const summaryCards = [
   { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue", folderIcon: folderBlueIcon, icon: districtBuildingIcon },
@@ -60,6 +61,8 @@ const nowonMapUrl =
   "https://www.openstreetmap.org/export/embed.html?bbox=127.045%2C37.615%2C127.115%2C37.705&layer=mapnik&marker=37.6542%2C127.0568";
 
 function DashboardPage() {
+  const { region, dong, year } = useFilters();
+
   return (
     <section className="workspace">
       <header className="topbar">
@@ -69,15 +72,15 @@ function DashboardPage() {
         </div>
         <div className="filters">
           <button type="button">
-            노원구
+            {region}
             <Icon src={chevronDownIcon} alt="" />
           </button>
           <button type="button">
-            전체 행정동
+            {dong}
             <Icon src={chevronDownIcon} alt="" />
           </button>
           <button type="button">
-            2024년
+            {year}
             <Icon src={calendarIcon} alt="" />
           </button>
           <button className="profile" type="button">

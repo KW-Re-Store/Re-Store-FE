@@ -2,6 +2,7 @@ import chevronDownIcon from "../assets/icons/chevron-down.svg";
 import dataExportIcon from "../assets/icons/data-export.svg";
 import pdfDownloadIcon from "../assets/icons/pdf-download.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
+import FilterDisplay from "../components/FilterDisplay";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
@@ -27,8 +28,8 @@ const causes = [
 ];
 
 const industries = [
-  { label: "음식업", count: "1,036개", share: "56.3%", change: "▲ 1.2%", color: "#ef4444", tone: "up" },
-  { label: "소매업", count: "412개", share: "22.4%", change: "▼ 0.8%", color: "#3b82f6", tone: "down" },
+  { label: "음식업", count: "1,036개", share: "56.3%", change: "▲ 1.2%", color: "#155dfc", tone: "up" },
+  { label: "소매업", count: "412개", share: "22.4%", change: "▼ 0.8%", color: "#f97316", tone: "down" },
   { label: "서비스업", count: "258개", share: "14.0%", change: "▼ 0.3%", color: "#22c55e", tone: "down" },
   { label: "기타", count: "136개", share: "7.3%", change: "▼ 0.1%", color: "#a855f7", tone: "down" }
 ];
@@ -63,6 +64,7 @@ function TradeAreaAnalysisPage() {
           <p>선택한 행정동의 상권 현황과 폐업 원인을 분석하고 인사이트를 제공합니다.</p>
         </div>
         <div className="filters">
+          <FilterDisplay />
           <button className="profile" type="button">
             <span>
               <Icon src={userHomeIcon} alt="" />
@@ -77,17 +79,8 @@ function TradeAreaAnalysisPage() {
       </header>
 
       <div className="ta-body">
-        <div className="action-row">
-          <button className="btn-outline" type="button">
-            <Icon src={pdfDownloadIcon} alt="" /> PDF 보고서 다운로드
-          </button>
-          <button className="btn-outline" type="button">
-            <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
-          </button>
-        </div>
-
         <div className="ta-row">
-          <article className="ta-card">
+          <article className="ta-card ta-card--fit">
             <div className="ta-overview-head">
               <div className="ta-overview-title">
                 <h3>상계10동 상권 개요</h3>
@@ -115,18 +108,7 @@ function TradeAreaAnalysisPage() {
             </div>
           </article>
 
-          <article className="ta-card">
-            <h3>주요 지표 추이</h3>
-            <LineChart
-              series={trendSeries}
-              xLabels={["'22.1Q", "'22.2Q", "'22.3Q", "'22.4Q", "'23.1Q", "'23.2Q", "'23.3Q", "'23.4Q", "'24.1Q"]}
-              yTicks={[-20, -10, 0, 10]}
-            />
-          </article>
-        </div>
-
-        <div className="ta-row">
-          <article className="ta-card ta-card--flush">
+          <article className="ta-card ta-card--flush ta-card--fit">
             <div className="ta-card-header">상권 현황</div>
             <div className="ta-status-body">
               <div className="ta-status-map">
@@ -166,33 +148,18 @@ function TradeAreaAnalysisPage() {
           </article>
 
           <article className="ta-card">
-            <h3>
-              원인 분석 <span className="ta-muted">(상위 주요 요인)</span>
-            </h3>
-            <div className="ta-cause-list">
-              {causes.map((cause) => (
-                <div className="ta-cause-row" key={cause.label}>
-                  <span className="ta-cause-icon" style={{ background: `${cause.color}1a` }}>
-                    {cause.icon}
-                  </span>
-                  <div className="ta-cause-main">
-                    <div className="ta-cause-top">
-                      <strong>{cause.label}</strong>
-                      <span style={{ color: cause.color }}>{cause.score}점</span>
-                    </div>
-                    <div className="ta-cause-bar">
-                      <i style={{ width: `${cause.score}%`, background: cause.color }} />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="note">* 영향도는 상권 위험지수에 미치는 기여도를 100점 기준으로 산정</p>
+            <h3 className="ta-trend-title">주요 지표 추이</h3>
+            <LineChart
+              series={trendSeries}
+              xLabels={["'22.1Q", "'22.2Q", "'22.3Q", "'22.4Q", "'23.1Q", "'23.2Q", "'23.3Q", "'23.4Q", "'24.1Q"]}
+              yTicks={[-20, -10, 0, 10, 20]}
+              height={354}
+            />
           </article>
         </div>
 
         <div className="ta-row">
-          <article className="ta-card">
+          <article className="ta-card ta-card--fit">
             <div className="ta-card-title-row">
               <h3>업종 분석</h3>
               <span className="ta-select">업종 대분류 기준 <Icon src={chevronDownIcon} alt="" /></span>
@@ -222,6 +189,28 @@ function TradeAreaAnalysisPage() {
             </button>
           </article>
 
+          <article className="ta-card ta-card--fit">
+            <h3>
+              원인 분석 <span className="ta-muted">(상위 주요 요인)</span>
+            </h3>
+            <div className="ta-cause-list">
+              {causes.map((cause) => (
+                <div className="ta-cause-row" key={cause.label}>
+                  <span className="ta-cause-icon" style={{ background: `${cause.color}1a` }}>
+                    {cause.icon}
+                  </span>
+                  <div className="ta-cause-main">
+                    <div className="ta-cause-top">
+                      <strong>{cause.label}</strong>
+                      <span style={{ color: cause.color }}>{cause.score}점</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="note">* 영향도는 상권 위험지수에 미치는 기여도를 100점 기준으로 산정</p>
+          </article>
+
           <article className="ta-card ta-insight-card">
             <h3>인사이트 요약</h3>
             <div className="ta-insight-list">
@@ -236,6 +225,15 @@ function TradeAreaAnalysisPage() {
               정책 추천 보기 →
             </a>
           </article>
+        </div>
+
+        <div className="action-row action-row--bottom">
+          <button className="btn-outline" type="button">
+            <Icon src={pdfDownloadIcon} alt="" /> PDF 보고서 다운로드
+          </button>
+          <button className="btn-outline" type="button">
+            <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
+          </button>
         </div>
       </div>
     </section>
