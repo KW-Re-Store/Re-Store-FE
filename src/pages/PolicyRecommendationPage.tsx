@@ -137,20 +137,6 @@ function PolicyRecommendationPage() {
 
       <div className="pr-layout">
         <div className="pr-left">
-          <div className="pr-summary-card">
-            <div className="pr-summary-title">
-              <h3>상계10동 분석 요약</h3>
-              <span className="ta-badge-risk">고위험</span>
-            </div>
-            <div className="risk-strip">
-              <span className="risk-strip-label">위험도</span>
-              <span className="risk-strip-value">
-                82.4<small>/100</small>
-              </span>
-              <span className="risk-strip-delta">▲ 12.6점</span>
-            </div>
-          </div>
-
           <article className="pr-sim-card">
             <div className="pr-sim-head">
               <h3>
@@ -221,17 +207,6 @@ function PolicyRecommendationPage() {
             <h3>
               맞춤 정책 추천 TOP 4 <Icon src={infoCircleIcon} alt="" />
             </h3>
-            <div className="pr-legend">
-              <span>
-                <i style={{ background: "#ef4444" }} /> 높음
-              </span>
-              <span>
-                <i style={{ background: "#fb923c" }} /> 보통
-              </span>
-              <span>
-                <i style={{ background: "#22c55e" }} /> 낮음
-              </span>
-            </div>
           </div>
           <div className="pr-card-list">
             {recommendedPolicies.map((policy) => (

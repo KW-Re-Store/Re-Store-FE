@@ -1046,10 +1046,14 @@ h4 .icon {
 .ta-risk-block {
   width: 180px;
   flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 16px;
   border-radius: 12px;
   background: #ef4444;
   color: #ffffff;
+  text-align: center;
 }
 
 .ta-risk-block .label {
@@ -1400,36 +1404,6 @@ h4 .icon {
   gap: 20px;
 }
 
-.pr-summary-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 18px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #ffffff;
-}
-
-.pr-summary-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 0 0 auto;
-}
-
-.pr-summary-title h3 {
-  margin: 0;
-  color: #1e2939;
-  font-size: 16px;
-  white-space: nowrap;
-}
-
-.pr-summary-card .risk-strip {
-  flex: 1;
-  max-width: 320px;
-}
-
 .pr-sim-card,
 .pr-related-card {
   display: grid;
@@ -1641,21 +1615,6 @@ h4 .icon {
   margin: 0;
   color: #1e2939;
   font-size: 16px;
-}
-
-.pr-legend {
-  display: flex;
-  gap: 16px;
-  color: #6a7282;
-  font-size: 11px;
-}
-
-.pr-legend i {
-  width: 10px;
-  height: 10px;
-  margin-right: 4px;
-  border-radius: 50%;
-  display: inline-block;
 }
 
 .pr-card-list {
@@ -2001,24 +1960,8 @@ h4 .icon {
   text-align: left;
 }
 
-.pm-ring-mini {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-
-.pm-ring-mini-inner {
-  width: 20px;
-  height: 20px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #ffffff;
+.pm-percent-value {
   color: #155dfc;
-  font-size: 8px;
   font-weight: 700;
 }
 
@@ -2137,12 +2080,6 @@ h4 .icon {
   margin: 0 6px;
   color: #1e2939;
   font-size: 13px;
-}
-
-.pm-effect-summary .pm-ring-mini {
-  display: inline-grid;
-  margin-left: 2px;
-  vertical-align: middle;
 }
 
 .pm-effect-table {

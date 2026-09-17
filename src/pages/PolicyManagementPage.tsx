@@ -44,11 +44,6 @@ const beforeAfter = [
   { label: "2년 생존", before: "56.5%", after: "61.3%", change: "▲ 4.8%p", tone: "up" }
 ];
 
-function ringStyle(percent: number) {
-  const clamped = Math.min(percent, 100);
-  return { background: `conic-gradient(#155dfc 0% ${clamped}%, #dbeafe ${clamped}% 100%)` };
-}
-
 const nowonMapUrl =
   "https://www.openstreetmap.org/export/embed.html?bbox=127.045%2C37.615%2C127.115%2C37.705&layer=mapnik&marker=37.6542%2C127.0568";
 
@@ -130,11 +125,7 @@ function PolicyManagementPage() {
                   <td>{program.name}</td>
                   <td className="center">{program.budget}</td>
                   <td className="center">{program.rate}</td>
-                  <td className="center">
-                    <span className="pm-ring-mini" style={ringStyle(program.target)}>
-                      <span className="pm-ring-mini-inner">{program.target}%</span>
-                    </span>
-                  </td>
+                  <td className="center pm-percent-value">{program.target}%</td>
                   <td className="pm-highlight">{program.result}</td>
                 </tr>
               ))}
@@ -188,16 +179,10 @@ function PolicyManagementPage() {
           </div>
           <div className="pm-effect-summary">
             <span>
-              추진 중 사업 <strong>8개</strong>
-              <span className="pm-ring-mini" style={ringStyle(67)}>
-                <span className="pm-ring-mini-inner">67%</span>
-              </span>
+              추진 중 사업 <strong>8개</strong> <span className="pm-percent-value">67%</span>
             </span>
             <span>
-              완료 사업 <strong>3개</strong>
-              <span className="pm-ring-mini" style={ringStyle(25)}>
-                <span className="pm-ring-mini-inner">25%</span>
-              </span>
+              완료 사업 <strong>3개</strong> <span className="pm-percent-value">25%</span>
             </span>
             <span>
               예산 집행률 <strong>92%</strong>(7,360 / 8,000백만원)
