@@ -281,22 +281,26 @@ button {
 
 .summary-row {
   display: grid;
-  grid-template-columns: repeat(5, minmax(136px, 1fr));
+  grid-template-columns: repeat(5, clamp(180px, 15vw, 220px));
   gap: 10px;
+  justify-content: space-between;
+  overflow-x: auto;
 }
 
 .summary-card {
-  height: 138px;
+  aspect-ratio: 5 / 3;
   position: relative;
-  padding-top: 25px;
+  min-height: 0;
 }
 
 .folder-tab {
   position: absolute;
   top: 0;
   left: 0;
-  width: min(164px, 95%);
-  height: 28px;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 164 / 27;
+  z-index: 0;
   object-fit: fill;
 }
 
@@ -321,9 +325,10 @@ button {
 }
 
 .summary-body {
-  position: relative;
+  position: absolute;
+  inset: 23% 0 0;
   z-index: 1;
-  height: 112px;
+  min-height: 0;
   display: flex;
   gap: 12px;
   padding: 12px;
@@ -347,10 +352,17 @@ button {
   height: 32px;
 }
 
+.summary-body > div:last-child {
+  min-width: 0;
+}
+
 .summary-body span {
   display: block;
+  overflow: hidden;
   color: #6a7282;
   font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .summary-body strong {
@@ -368,9 +380,13 @@ button {
 }
 
 .summary-body p {
-  margin: 10px 0 0;
+  margin: 7px 0 0;
+  overflow: hidden;
   color: #99a1af;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .analysis-row {
