@@ -4,6 +4,7 @@ import infoCircleIcon from "../assets/icons/info-circle.svg";
 import pdfDownloadIcon from "../assets/icons/pdf-download.svg";
 import reportIcon from "../assets/icons/report.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
+import FilterDisplay from "../components/FilterDisplay";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
@@ -59,21 +60,11 @@ function PolicyManagementPage() {
     <section className="workspace">
       <header className="topbar">
         <div>
-          <h1>
-            정책 성과 관리 <Icon src={infoCircleIcon} alt="" />
-          </h1>
+          <h1>정책 관리</h1>
           <p>정책 사업의 추진 현황과 성과를 모니터링하고, 효과를 분석하여 개선 방향을 제시합니다.</p>
         </div>
         <div className="filters">
-          <button className="btn-outline" type="button">
-            <Icon src={pdfDownloadIcon} alt="" /> PDF 다운로드
-          </button>
-          <button className="btn-outline" type="button">
-            <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
-          </button>
-          <button className="btn-primary" type="button">
-            <Icon src={reportIcon} alt="" /> 성과 보고서 생성
-          </button>
+          <FilterDisplay />
           <button className="profile" type="button">
             <span>
               <Icon src={userHomeIcon} alt="" />
@@ -256,6 +247,18 @@ function PolicyManagementPage() {
             </tbody>
           </table>
         </article>
+      </div>
+
+      <div className="action-row action-row--bottom">
+        <button className="btn-outline" type="button">
+          <Icon src={pdfDownloadIcon} alt="" /> PDF 다운로드
+        </button>
+        <button className="btn-outline" type="button">
+          <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
+        </button>
+        <button className="btn-primary" type="button">
+          <Icon src={reportIcon} alt="" /> 성과 보고서 생성
+        </button>
       </div>
     </section>
   );

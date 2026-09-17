@@ -1,6 +1,7 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
 import infoCircleIcon from "../assets/icons/info-circle.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
+import FilterDisplay from "../components/FilterDisplay";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
@@ -116,12 +117,11 @@ function PolicyRecommendationPage() {
     <section className="workspace">
       <header className="topbar">
         <div>
-          <h1>
-            정책 추천 <Icon src={infoCircleIcon} alt="" />
-          </h1>
+          <h1>정책 추천</h1>
           <p>분석 결과를 기반으로 상권의 문제를 해결하기 위한 맞춤형 정책을 추천합니다.</p>
         </div>
         <div className="filters">
+          <FilterDisplay />
           <button className="profile" type="button">
             <span>
               <Icon src={userHomeIcon} alt="" />

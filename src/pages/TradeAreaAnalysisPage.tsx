@@ -2,6 +2,7 @@ import chevronDownIcon from "../assets/icons/chevron-down.svg";
 import dataExportIcon from "../assets/icons/data-export.svg";
 import pdfDownloadIcon from "../assets/icons/pdf-download.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
+import FilterDisplay from "../components/FilterDisplay";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
@@ -63,6 +64,7 @@ function TradeAreaAnalysisPage() {
           <p>선택한 행정동의 상권 현황과 폐업 원인을 분석하고 인사이트를 제공합니다.</p>
         </div>
         <div className="filters">
+          <FilterDisplay />
           <button className="profile" type="button">
             <span>
               <Icon src={userHomeIcon} alt="" />
@@ -77,15 +79,6 @@ function TradeAreaAnalysisPage() {
       </header>
 
       <div className="ta-body">
-        <div className="action-row">
-          <button className="btn-outline" type="button">
-            <Icon src={pdfDownloadIcon} alt="" /> PDF 보고서 다운로드
-          </button>
-          <button className="btn-outline" type="button">
-            <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
-          </button>
-        </div>
-
         <div className="ta-row">
           <article className="ta-card">
             <div className="ta-overview-head">
@@ -236,6 +229,15 @@ function TradeAreaAnalysisPage() {
               정책 추천 보기 →
             </a>
           </article>
+        </div>
+
+        <div className="action-row action-row--bottom">
+          <button className="btn-outline" type="button">
+            <Icon src={pdfDownloadIcon} alt="" /> PDF 보고서 다운로드
+          </button>
+          <button className="btn-outline" type="button">
+            <Icon src={dataExportIcon} alt="" /> 데이터 내보내기
+          </button>
         </div>
       </div>
     </section>
