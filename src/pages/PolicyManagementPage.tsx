@@ -1,5 +1,4 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
-import infoCircleIcon from "../assets/icons/info-circle.svg";
 import reportIcon from "../assets/icons/report.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import FilterDisplay from "../components/FilterDisplay";
@@ -89,128 +88,130 @@ function PolicyManagementPage() {
       </div>
 
       <div className="pm-grid">
-        <article className="pm-panel">
-          <div className="pm-panel-head">
-            <h3>
-              주요 지표 추이 <Icon src={infoCircleIcon} alt="" />
-            </h3>
-          </div>
-          <LineChart
-            series={trendSeries}
-            xLabels={["'22.1Q", "'22.2Q", "'22.3Q", "'22.4Q", "'23.1Q", "'23.2Q", "'23.3Q", "'23.4Q", "'24.1Q", "'24.2Q", "'24.3Q", "'24.4Q"]}
-            yTicks={[0, 20, 40, 60]}
-            height={130}
-          />
-        </article>
+        <div className="pm-grid-row">
+          <article className="pm-panel">
+            <div className="pm-panel-head">
+              <h3>주요 지표 추이</h3>
+            </div>
+            <LineChart
+              series={trendSeries}
+              xLabels={["'22.1Q", "'22.2Q", "'22.3Q", "'22.4Q", "'23.1Q", "'23.2Q", "'23.3Q", "'23.4Q", "'24.1Q", "'24.2Q", "'24.3Q", "'24.4Q"]}
+              yTicks={[-10, 0, 20, 40, 60]}
+              height={209}
+            />
+          </article>
 
-        <article className="pm-panel">
-          <div className="pm-panel-head">
-            <h3>사업별 성과 TOP 5</h3>
-          </div>
-          <table className="pm-table">
-            <thead>
-              <tr>
-                <th>순위</th>
-                <th>사업명</th>
-                <th className="center">예산</th>
-                <th className="center">집행률</th>
-                <th className="center">목표 대비</th>
-                <th>주요 성과</th>
-              </tr>
-            </thead>
-            <tbody>
-              {topPrograms.map((program) => (
-                <tr key={program.rank}>
-                  <td>{program.rank}</td>
-                  <td>{program.name}</td>
-                  <td className="center">{program.budget}</td>
-                  <td className="center">{program.rate}</td>
-                  <td className="center pm-percent-value">{program.target}%</td>
-                  <td className="pm-highlight">{program.result}</td>
+          <article className="pm-panel pm-panel--narrow-sm">
+            <div className="pm-panel-head">
+              <h3>사업별 성과 TOP 5</h3>
+            </div>
+            <table className="pm-table">
+              <thead>
+                <tr>
+                  <th>순위</th>
+                  <th>사업명</th>
+                  <th className="center">예산</th>
+                  <th className="center">집행률</th>
+                  <th className="center">목표 대비</th>
+                  <th>주요 성과</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </article>
+              </thead>
+              <tbody>
+                {topPrograms.map((program) => (
+                  <tr key={program.rank}>
+                    <td>{program.rank}</td>
+                    <td>{program.name}</td>
+                    <td className="center">{program.budget}</td>
+                    <td className="center">{program.rate}</td>
+                    <td className="center pm-percent-value">{program.target}%</td>
+                    <td className="pm-highlight">{program.result}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </article>
+        </div>
 
-        <article className="pm-panel">
-          <div className="pm-panel-head">
-            <h3>지역별 성과 비교</h3>
-          </div>
-          <div className="pm-map-row">
-            <div className="pm-map-box">
-              <iframe title="지역별 성과 지도" src={nowonMapUrl} loading="lazy" />
-              <div className="pm-map-legend">
-                <strong>위험등급</strong>
-                <div>
-                  <i style={{ background: "#ef4444" }} /> 고위험
-                </div>
-                <div>
-                  <i style={{ background: "#f97316" }} /> 주의
-                </div>
-                <div>
-                  <i style={{ background: "#22c55e" }} /> 관심
+        <div className="pm-grid-row">
+          <article className="pm-panel">
+            <div className="pm-panel-head">
+              <h3>지역별 성과 비교</h3>
+            </div>
+            <div className="pm-map-row">
+              <div className="pm-map-box">
+                <iframe title="지역별 성과 지도" src={nowonMapUrl} loading="lazy" />
+                <div className="pm-map-legend">
+                  <strong>위험등급</strong>
+                  <div>
+                    <i style={{ background: "#ef4444" }} /> 고위험
+                  </div>
+                  <div>
+                    <i style={{ background: "#f97316" }} /> 주의
+                  </div>
+                  <div>
+                    <i style={{ background: "#22c55e" }} /> 관심
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="pm-region-list">
-              <div className="pm-region-head">
-                <span>행정동</span>
-                <span>성과</span>
-                <span>전년</span>
-              </div>
-              {regionPerformance.map((region) => (
-                <div className="pm-region-row" key={region.name}>
-                  <span className="name">{region.name}</span>
-                  <span className="score">{region.score}</span>
-                  <span className={`yoy ${region.tone}`}>{region.yoy}</span>
+              <div className="pm-region-list">
+                <div className="pm-region-head">
+                  <span>행정동</span>
+                  <span>성과</span>
+                  <span>전년</span>
                 </div>
-              ))}
-              <a className="pm-more-link" href="/정책관리">
-                전체 지역 보기 ›
-              </a>
+                {regionPerformance.map((region) => (
+                  <div className="pm-region-row" key={region.name}>
+                    <span className="name">{region.name}</span>
+                    <span className="score">{region.score}</span>
+                    <span className={`yoy ${region.tone}`}>{region.yoy}</span>
+                  </div>
+                ))}
+                <a className="pm-more-link" href="/정책관리">
+                  전체 지역 보기 ›
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article className="pm-panel">
-          <div className="pm-panel-head">
-            <h3>정책 효과 분석 (지원 전·후 비교)</h3>
-          </div>
-          <div className="pm-effect-summary">
-            <span>
-              추진 중 사업 <strong>8개</strong> <span className="pm-percent-value">67%</span>
-            </span>
-            <span>
-              완료 사업 <strong>3개</strong> <span className="pm-percent-value">25%</span>
-            </span>
-            <span>
-              예산 집행률 <strong>92%</strong>(7,360 / 8,000백만원)
-            </span>
-          </div>
-          <table className="pm-effect-table">
-            <thead>
-              <tr>
-                <th>항목</th>
-                <th>지원 전 ('23.1Q~'23.4Q)</th>
-                <th>
-                  <span className="pm-effect-arrow">≫</span>지원 후 ('24.1Q~'24.4Q)
-                </th>
-                <th>개선 효과</th>
-              </tr>
-            </thead>
-            <tbody>
-              {beforeAfter.map((item) => (
-                <tr key={item.label}>
-                  <td>{item.label}</td>
-                  <td>{item.before}</td>
-                  <td>{item.after}</td>
-                  <td className={`val ${item.tone}`}>{item.change}</td>
+          <article className="pm-panel pm-panel--narrow-md">
+            <div className="pm-panel-head">
+              <h3>정책 효과 분석 (지원 전·후 비교)</h3>
+            </div>
+            <div className="pm-effect-summary">
+              <span>
+                추진 중 사업 <strong>8개</strong> <span className="pm-percent-value">67%</span>
+              </span>
+              <span>
+                완료 사업 <strong>3개</strong> <span className="pm-percent-value">25%</span>
+              </span>
+              <span>
+                예산 집행률 <strong>92%</strong>(7,360 / 8,000백만원)
+              </span>
+            </div>
+            <table className="pm-effect-table">
+              <thead>
+                <tr>
+                  <th>항목</th>
+                  <th>지원 전 ('23.1Q~'23.4Q)</th>
+                  <th>
+                    <span className="pm-effect-arrow">≫</span>지원 후 ('24.1Q~'24.4Q)
+                  </th>
+                  <th>개선 효과</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </article>
+              </thead>
+              <tbody>
+                {beforeAfter.map((item) => (
+                  <tr key={item.label}>
+                    <td>{item.label}</td>
+                    <td>{item.before}</td>
+                    <td>{item.after}</td>
+                    <td className={`val ${item.tone}`}>{item.change}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </article>
+        </div>
       </div>
 
       <div className="action-row action-row--bottom">

@@ -1,5 +1,4 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
-import infoCircleIcon from "../assets/icons/info-circle.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import FilterDisplay from "../components/FilterDisplay";
 import Icon from "../components/Icon";
@@ -204,9 +203,7 @@ function PolicyRecommendationPage() {
 
         <div className="pr-top-panel">
           <div className="pr-top-head">
-            <h3>
-              맞춤 정책 추천 TOP 4 <Icon src={infoCircleIcon} alt="" />
-            </h3>
+            <h3>맞춤 정책 추천 TOP 4</h3>
           </div>
           <div className="pr-card-list">
             {recommendedPolicies.map((policy) => (

@@ -148,11 +148,12 @@ function TradeAreaAnalysisPage() {
           </article>
 
           <article className="ta-card">
-            <h3>주요 지표 추이</h3>
+            <h3 className="ta-trend-title">주요 지표 추이</h3>
             <LineChart
               series={trendSeries}
               xLabels={["'22.1Q", "'22.2Q", "'22.3Q", "'22.4Q", "'23.1Q", "'23.2Q", "'23.3Q", "'23.4Q", "'24.1Q"]}
-              yTicks={[-20, -10, 0, 10]}
+              yTicks={[-20, -10, 0, 10, 20]}
+              height={354}
             />
           </article>
         </div>

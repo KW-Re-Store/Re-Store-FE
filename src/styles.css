@@ -983,6 +983,10 @@ h4 .icon {
   font-size: 16px;
 }
 
+.ta-card h3.ta-trend-title {
+  margin-bottom: 12px;
+}
+
 .ta-muted {
   color: #9ca3af;
   font-size: 13px;
@@ -1860,9 +1864,27 @@ h4 .icon {
 
 .pm-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 10px;
   padding: 10px 12px 12px;
+}
+
+.pm-grid-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.pm-grid-row > .pm-panel {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.pm-grid-row > .pm-panel--narrow-sm {
+  flex: 0.97 1 0;
+}
+
+.pm-grid-row > .pm-panel--narrow-md {
+  flex: 0.93 1 0;
 }
 
 .pm-panel {
@@ -1970,7 +1992,7 @@ h4 .icon {
 .pm-map-box {
   position: relative;
   flex: 0 0 52%;
-  height: 160px;
+  min-height: 160px;
   border-radius: 8px;
   overflow: hidden;
   background: #f9fafb;
@@ -2028,7 +2050,7 @@ h4 .icon {
 
 .pm-region-row {
   align-items: center;
-  padding: 5px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #f9fafb;
 }
 
