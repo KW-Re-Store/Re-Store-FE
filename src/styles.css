@@ -235,9 +235,65 @@ button {
   height: 12px;
 }
 
+.filter-select {
+  position: relative;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #364153;
+  font-size: 12px;
+}
+
+.filter-select select {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+  text-align: center;
+}
+
+.filter-select option {
+  text-align: center;
+}
+
+.filter-select .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filters button,
+.filter-static,
+.filter-select {
+  min-height: 34px;
+}
+
 .profile > span:first-child {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -360,7 +416,7 @@ button {
   display: block;
   overflow: hidden;
   color: #6a7282;
-  font-size: 11px;
+  font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -368,14 +424,14 @@ button {
 .summary-body strong {
   display: block;
   margin-top: 10px;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1;
 }
 
 .summary-body small {
   margin-left: 3px;
   color: #6a7282;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -383,7 +439,7 @@ button {
   margin: 7px 0 0;
   overflow: hidden;
   color: #99a1af;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 1.2;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -417,14 +473,14 @@ button {
 .panel-title h2 {
   margin: 0;
   color: #1e2939;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
 }
 
 .panel-title h2 span {
   margin-left: 4px;
   color: #99a1af;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
 }
 
@@ -440,7 +496,7 @@ button {
   gap: 10px;
   margin-bottom: 8px;
   color: #6a7282;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .legend i {
@@ -500,6 +556,10 @@ table {
   font-size: 11px;
 }
 
+.table-panel table {
+  font-size: 13px;
+}
+
 th,
 td {
   height: 44px;
@@ -524,6 +584,10 @@ td {
   padding: 0 9px;
   border-radius: 999px;
   font-size: 10px;
+}
+
+.table-panel .badge {
+  font-size: 12px;
 }
 
 .danger {
@@ -597,7 +661,7 @@ td {
 
 .risk-gauge {
   padding: 12px 10px 16px;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 0;
   text-align: center;
 }
 
@@ -605,12 +669,13 @@ td {
   margin: 0 0 10px;
   text-align: left;
   color: #111827;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
 }
 
 .risk-gauge h2 span {
   color: #99a1af;
+  font-size: 11px;
   font-weight: 400;
 }
 
@@ -699,12 +764,20 @@ td {
 }
 
 .indicator-card strong {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .indicator-card small {
   color: #99a1af;
-  font-size: 7px;
+  font-size: 10px;
+}
+
+.indicator-card small.up {
+  color: #155dfc;
+}
+
+.indicator-card small.down {
+  color: #e7000b;
 }
 
 .policy-panel {

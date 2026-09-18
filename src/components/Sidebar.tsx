@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import guideIcon from "../assets/icons/guide.svg";
 import navAnalysisIcon from "../assets/icons/nav-analysis.svg";
@@ -18,8 +18,6 @@ const navItems = [
 ];
 
 function Sidebar() {
-  const location = useLocation();
-
   return (
     <aside className="sidebar">
       <div className="brand">
@@ -32,9 +30,14 @@ function Sidebar() {
 
       <nav className="nav-menu" aria-label="주요 메뉴">
         {navItems.map((item) => (
-          <Link key={item.path} className={location.pathname === item.path ? "active" : ""} to={item.path}>
+          <NavLink
+            key={item.path}
+            className={({ isActive }) => (isActive ? "active" : "")}
+            end
+            to={item.path}
+          >
             <Icon src={item.icon} alt="" /> {item.label}
-          </Link>
+          </NavLink>
         ))}
       </nav>
 

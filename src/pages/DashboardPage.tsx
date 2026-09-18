@@ -1,5 +1,4 @@
 import alertTriangleIcon from "../assets/icons/alert-triangle.svg";
-import calendarIcon from "../assets/icons/calendar.svg";
 import chartUpIcon from "../assets/icons/chart-up.svg";
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
 import districtBuildingIcon from "../assets/icons/district-building.svg";
@@ -15,8 +14,8 @@ import reportIcon from "../assets/icons/report.svg";
 import sadFaceIcon from "../assets/icons/sad-face.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import Icon from "../components/Icon";
+import FilterDisplay from "../components/FilterDisplay";
 import PanelTitle from "../components/PanelTitle";
-import { useFilters } from "../context/FilterContext";
 
 const summaryCards = [
   { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue", folderIcon: folderBlueIcon, icon: districtBuildingIcon },
@@ -61,8 +60,6 @@ const nowonMapUrl =
   "https://www.openstreetmap.org/export/embed.html?bbox=127.045%2C37.615%2C127.115%2C37.705&layer=mapnik&marker=37.6542%2C127.0568";
 
 function DashboardPage() {
-  const { region, dong, year } = useFilters();
-
   return (
     <section className="workspace">
       <header className="topbar">
@@ -71,25 +68,13 @@ function DashboardPage() {
           <p>행정동별 상권 위험도와 주요 지표를 한눈에 확인하고 정책 대상 지역을 선정하세요.</p>
         </div>
         <div className="filters">
-          <button type="button">
-            {region}
-            <Icon src={chevronDownIcon} alt="" />
-          </button>
-          <button type="button">
-            {dong}
-            <Icon src={chevronDownIcon} alt="" />
-          </button>
-          <button type="button">
-            {year}
-            <Icon src={calendarIcon} alt="" />
-          </button>
+          <FilterDisplay editable />
           <button className="profile" type="button">
             <span>
               <Icon src={userHomeIcon} alt="" />
             </span>
             <span>
               <b>노원구청</b>
-              <small>상권정책 담당자</small>
             </span>
             <Icon src={chevronDownIcon} alt="" />
           </button>
@@ -211,7 +196,9 @@ function DashboardPage() {
                 <div className="indicator-card" key={label}>
                   <span>{label}</span>
                   <strong>{value}</strong>
-                  <small>전분기 대비 {change}</small>
+                  <small className={change.startsWith("↑") ? "up" : "down"}>
+                    {change.slice(2)} {change[0]}
+                  </small>
                 </div>
               ))}
             </div>
