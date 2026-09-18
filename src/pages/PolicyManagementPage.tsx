@@ -62,7 +62,6 @@ function PolicyManagementPage() {
             </span>
             <span>
               <b>노원구청</b>
-              <small>상권정책 담당자</small>
             </span>
             <Icon src={chevronDownIcon} alt="" />
           </button>
