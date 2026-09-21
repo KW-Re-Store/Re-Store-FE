@@ -107,6 +107,17 @@ button {
   object-fit: contain;
 }
 
+.glyph {
+  display: inline-block;
+  flex: 0 0 auto;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
 .nav-menu .icon {
   width: 15px;
   height: 15px;
@@ -1621,7 +1632,7 @@ h4 .icon {
 .pr-policy-card {
   display: flex;
   gap: 24px;
-  padding: 20px;
+  padding: 16px 20px;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: #ffffff;
@@ -1675,7 +1686,7 @@ h4 .icon {
 .pr-policy-title {
   margin: 2px 0 0;
   color: #1e2939;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .pr-policy-rating {
@@ -1711,7 +1722,7 @@ h4 .icon {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding-top: 16px;
+  padding-top: 12px;
   border-top: 1px solid #f9fafb;
 }
 
@@ -1877,14 +1888,6 @@ h4 .icon {
 .pm-grid-row > .pm-panel {
   flex: 1 1 0;
   min-width: 0;
-}
-
-.pm-grid-row > .pm-panel--narrow-sm {
-  flex: 0.97 1 0;
-}
-
-.pm-grid-row > .pm-panel--narrow-md {
-  flex: 0.93 1 0;
 }
 
 .pm-panel {

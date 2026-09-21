@@ -1,8 +1,13 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
 import dataExportIcon from "../assets/icons/data-export.svg";
+import buildingIcon from "../assets/icons/lucide/building.svg";
+import rocketIcon from "../assets/icons/lucide/rocket.svg";
+import trendingDownIcon from "../assets/icons/lucide/trending-down.svg";
+import usersIcon from "../assets/icons/lucide/users.svg";
 import pdfDownloadIcon from "../assets/icons/pdf-download.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import FilterDisplay from "../components/FilterDisplay";
+import GlyphIcon from "../components/GlyphIcon";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
@@ -21,10 +26,10 @@ const trendSeries = [
 ];
 
 const causes = [
-  { icon: "👥", label: "유동인구 감소", score: 87, color: "#ef4444" },
-  { icon: "📉", label: "매출액 감소", score: 76, color: "#f97316" },
-  { icon: "🏬", label: "공실 증가", score: 68, color: "#eab308" },
-  { icon: "🚀", label: "신규 창업 감소", score: 58, color: "#3b82f6" }
+  { icon: usersIcon, label: "유동인구 감소", score: 87, color: "#ef4444" },
+  { icon: trendingDownIcon, label: "매출액 감소", score: 76, color: "#f97316" },
+  { icon: buildingIcon, label: "공실 증가", score: 68, color: "#eab308" },
+  { icon: rocketIcon, label: "신규 창업 감소", score: 58, color: "#3b82f6" }
 ];
 
 const industries = [
@@ -197,7 +202,7 @@ function TradeAreaAnalysisPage() {
               {causes.map((cause) => (
                 <div className="ta-cause-row" key={cause.label}>
                   <span className="ta-cause-icon" style={{ background: `${cause.color}1a` }}>
-                    {cause.icon}
+                    <GlyphIcon src={cause.icon} color={cause.color} size={20} />
                   </span>
                   <div className="ta-cause-main">
                     <div className="ta-cause-top">
