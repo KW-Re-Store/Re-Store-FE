@@ -93,7 +93,7 @@ function TradeAreaAnalysisPage() {
                 <div className="value">
                   82.4<small>/100</small>
                 </div>
-                <span className="delta">전분기 대비 ▲ 12.6점</span>
+                <span className="delta">전년도 대비 ▲ 12.6점</span>
               </div>
               <div className="ta-stat-grid">
                 {overviewStats.map((stat) => (
