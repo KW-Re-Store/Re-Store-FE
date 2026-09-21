@@ -1,13 +1,21 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
+import clipboardListIcon from "../assets/icons/lucide/clipboard-list.svg";
+import handshakeIcon from "../assets/icons/lucide/handshake.svg";
+import hardHatIcon from "../assets/icons/lucide/hard-hat.svg";
+import laptopIcon from "../assets/icons/lucide/laptop.svg";
+import megaphoneIcon from "../assets/icons/lucide/megaphone.svg";
+import storeIcon from "../assets/icons/lucide/store.svg";
+import usersIcon from "../assets/icons/lucide/users.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import FilterDisplay from "../components/FilterDisplay";
+import GlyphIcon from "../components/GlyphIcon";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
 const recommendedPolicies = [
   {
     rank: 1,
-    icon: "📢",
+    icon: megaphoneIcon,
     iconBg: "#eff6ff",
     rankColor: "#155dfc",
     category: "상권 활성화",
@@ -24,7 +32,7 @@ const recommendedPolicies = [
   },
   {
     rank: 2,
-    icon: "👥",
+    icon: usersIcon,
     iconBg: "#f0fdf4",
     rankColor: "#22c55e",
     category: "경영 지원",
@@ -41,7 +49,7 @@ const recommendedPolicies = [
   },
   {
     rank: 3,
-    icon: "🏗️",
+    icon: hardHatIcon,
     iconBg: "#fff7ed",
     rankColor: "#f97316",
     category: "환경 개선",
@@ -58,7 +66,7 @@ const recommendedPolicies = [
   },
   {
     rank: 4,
-    icon: "💻",
+    icon: laptopIcon,
     iconBg: "#eff6ff",
     rankColor: "#0ea5e9",
     category: "디지털 전환",
@@ -77,21 +85,21 @@ const recommendedPolicies = [
 
 const relatedPrograms = [
   {
-    icon: "📋",
+    icon: clipboardListIcon,
     title: "소상공인 경영환경 개선 사업",
     description: "시설 개선, 시스템 지원 등",
     status: "연계 가능",
     statusTone: "ok"
   },
   {
-    icon: "🏪",
+    icon: storeIcon,
     title: "전통시장 및 상점가 활성화 사업",
     description: "공동마케팅, 이벤트, 환경개선 지원",
     status: "연계 가능",
     statusTone: "ok"
   },
   {
-    icon: "🤝",
+    icon: handshakeIcon,
     title: "지역 상권 상생 협력 지원 사업",
     description: "상권 협의체 운영 및 상생 모델 지원",
     status: "검토 필요",
@@ -183,7 +191,9 @@ function PolicyRecommendationPage() {
             <div className="pr-related-list">
               {relatedPrograms.map((program) => (
                 <div className="pr-related-item" key={program.title}>
-                  <span className="pr-related-icon">{program.icon}</span>
+                  <span className="pr-related-icon">
+                    <GlyphIcon src={program.icon} color="#155dfc" size={18} />
+                  </span>
                   <div className="pr-related-main">
                     <div className="pr-related-title-row">
                       <strong>{program.title}</strong>
@@ -208,7 +218,7 @@ function PolicyRecommendationPage() {
             {recommendedPolicies.map((policy) => (
               <article className="pr-policy-card" key={policy.title}>
                 <div className="pr-policy-icon" style={{ background: policy.iconBg }}>
-                  {policy.icon}
+                  <GlyphIcon src={policy.icon} color={policy.rankColor} size={28} />
                   <span className="pr-policy-rank" style={{ background: policy.rankColor }}>
                     {policy.rank}
                   </span>

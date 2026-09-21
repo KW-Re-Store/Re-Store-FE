@@ -1,16 +1,22 @@
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
+import chartColumnIcon from "../assets/icons/lucide/chart-column.svg";
+import folderIcon from "../assets/icons/lucide/folder.svg";
+import trendingDownIcon from "../assets/icons/lucide/trending-down.svg";
+import usersIcon from "../assets/icons/lucide/users.svg";
+import walletIcon from "../assets/icons/lucide/wallet.svg";
 import reportIcon from "../assets/icons/report.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import FilterDisplay from "../components/FilterDisplay";
+import GlyphIcon from "../components/GlyphIcon";
 import Icon from "../components/Icon";
 import LineChart from "../components/LineChart";
 
 const kpiCards = [
-  { icon: "📁", bg: "#eef2ff", label: "지원 사업 수", value: "12", unit: "개", change: "▲ 2개", tone: "up" },
-  { icon: "₩", bg: "#eef8ee", label: "총 예산", value: "8,000", unit: "백만원", change: "▲ 1,000백만원", tone: "up" },
-  { icon: "📉", bg: "#fff2e5", label: "폐업률", value: "9.1", unit: "%", change: "▼ 1.6%p", tone: "down" },
-  { icon: "📊", bg: "#eff6fe", label: "매출액 증감률", value: "-2.1", unit: "%", change: "▲ 1.8%p", tone: "up" },
-  { icon: "👥", bg: "#eef8ee", label: "유동인구 증감률", value: "+3.8", unit: "%", change: "▲ 0.7%p", tone: "up" }
+  { icon: folderIcon, iconColor: "#4f46e5", bg: "#eef2ff", label: "지원 사업 수", value: "12", unit: "개", change: "▲ 2개", tone: "up" },
+  { icon: walletIcon, iconColor: "#16a34a", bg: "#eef8ee", label: "총 예산", value: "8,000", unit: "백만원", change: "▲ 1,000백만원", tone: "up" },
+  { icon: trendingDownIcon, iconColor: "#f97316", bg: "#fff2e5", label: "폐업률", value: "9.1", unit: "%", change: "▼ 1.6%p", tone: "down" },
+  { icon: chartColumnIcon, iconColor: "#2b7fff", bg: "#eff6fe", label: "매출액 증감률", value: "-2.1", unit: "%", change: "▲ 1.8%p", tone: "up" },
+  { icon: usersIcon, iconColor: "#16a34a", bg: "#eef8ee", label: "유동인구 증감률", value: "+3.8", unit: "%", change: "▲ 0.7%p", tone: "up" }
 ];
 
 const trendSeries = [
@@ -72,7 +78,7 @@ function PolicyManagementPage() {
         {kpiCards.map((card) => (
           <div className="pm-kpi-card" key={card.label}>
             <span className="pm-kpi-icon" style={{ background: card.bg }}>
-              {card.icon}
+              <GlyphIcon src={card.icon} color={card.iconColor} size={20} />
             </span>
             <div>
               <span className="label">{card.label}</span>
@@ -100,7 +106,7 @@ function PolicyManagementPage() {
             />
           </article>
 
-          <article className="pm-panel pm-panel--narrow-sm">
+          <article className="pm-panel">
             <div className="pm-panel-head">
               <h3>사업별 성과 TOP 5</h3>
             </div>
@@ -172,7 +178,7 @@ function PolicyManagementPage() {
             </div>
           </article>
 
-          <article className="pm-panel pm-panel--narrow-md">
+          <article className="pm-panel">
             <div className="pm-panel-head">
               <h3>정책 효과 분석 (지원 전·후 비교)</h3>
             </div>
