@@ -19,10 +19,10 @@ import PanelTitle from "../components/PanelTitle";
 
 const summaryCards = [
   { label: "전체 행정동 수", value: "19", unit: "개", note: "노원구 행정동 기준", tone: "blue", folderIcon: folderBlueIcon, icon: districtBuildingIcon },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↑ 1개", tone: "red", folderIcon: folderRedIcon, icon: highRiskMarketIcon },
-  { label: "주의 상권", value: "6", unit: "개", note: "전분기 대비 -", tone: "amber", folderIcon: folderOrangeIcon, icon: alertTriangleIcon },
-  { label: "고위험 상권", value: "4", unit: "개", note: "전분기 대비 ↓ 1개", tone: "green", folderIcon: folderGreenIcon, icon: infoCircleIcon },
-  { label: "상권 위험지수", value: "4", unit: "개", note: "전분기 대비 ↓ 3.5개", tone: "violet", folderIcon: folderPurpleIcon, icon: highRiskTrendIcon }
+  { label: "고위험 상권", value: "4", unit: "개", share: "21.1%", note: "전년도 대비", change: "▲ 1개", changeTone: "up", tone: "red", folderIcon: folderRedIcon, icon: highRiskMarketIcon },
+    { label: "주의 상권", value: "6", unit: "개", share: "31.6%", note: "전년도 대비", change: "-", tone: "amber", folderIcon: folderOrangeIcon, icon: alertTriangleIcon },
+  { label: "고위험 상권", value: "4", unit: "개", share: "21.1%", note: "전년도 대비", change: "▼ 1개", changeTone: "down", tone: "green", folderIcon: folderGreenIcon, icon: infoCircleIcon },
+  { label: "상권 위험지수", value: "4", unit: "개", share: "21.1%", note: "전년도 대비", change: "▼ 3.5개", changeTone: "down", tone: "violet", folderIcon: folderPurpleIcon, icon: highRiskTrendIcon }
 ];
 
 const riskRows = [
@@ -42,12 +42,12 @@ const causes = [
 ];
 
 const indicators = [
-  ["폐업률", "12.4%", "↑ 3.1%"],
-  ["매출액 증감률", "-7.6%", "↓ 3.3%"],
-  ["유동인구 증감률", "-9.3%", "↓ 4.2%"],
-  ["신규 창업 증감률", "-11.2%", "↓ 6.1%"],
-  ["공실률", "12.7%", "↑ 1.9%"],
-  ["영업 점포 증감률", "12.4%", "↑ 3.1%"]
+  ["폐업률", "12.4%", "▲ 3.1%"],
+  ["매출액 증감률", "-7.6%", "▼ 3.3%"],
+  ["유동인구 증감률", "-9.3%", "▼ 4.2%"],
+  ["신규 창업 증감률", "-11.2%", "▼ 6.1%"],
+  ["공실률", "12.7%", "▲ 1.9%"],
+  ["영업 점포 증감률", "12.4%", "▲ 3.1%"]
 ];
 
 const policyItems = [
@@ -97,7 +97,13 @@ function DashboardPage() {
                       {card.value}
                       <small>{card.unit}</small>
                     </strong>
-                    <p>{card.note}</p>
+                    <span className={`summary-share${card.share ? "" : " summary-share--empty"}`}>
+                      ({card.share ?? "100.0%"})
+                    </span>
+                    <p>
+                      {card.note}
+                      {card.change && <span className={`summary-change ${card.changeTone ?? ""}`}>{card.change}</span>}
+                    </p>
                   </div>
                 </div>
               </article>
@@ -185,7 +191,7 @@ function DashboardPage() {
               </strong>
             </div>
             <p>
-              전분기 대비 <b>↓ 3.5점</b>
+              전년도 대비 <b>▼ 3.5점</b>
             </p>
           </article>
 
@@ -196,7 +202,7 @@ function DashboardPage() {
                 <div className="indicator-card" key={label}>
                   <span>{label}</span>
                   <strong>{value}</strong>
-                  <small className={change.startsWith("↑") ? "up" : "down"}>
+                  <small className={change.startsWith("▲") ? "up" : "down"}>
                     {change.slice(2)} {change[0]}
                   </small>
                 </div>
