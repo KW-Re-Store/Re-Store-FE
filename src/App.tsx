@@ -5,6 +5,7 @@ import { FilterProvider } from "./context/FilterContext";
 import DashboardPage from "./pages/DashboardPage";
 import PolicyManagementPage from "./pages/PolicyManagementPage";
 import PolicyRecommendationPage from "./pages/PolicyRecommendationPage";
+import SettingsPage from "./pages/SettingsPage";
 import TradeAreaAnalysisPage from "./pages/TradeAreaAnalysisPage";
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
           <Route path="/상권분석" element={<TradeAreaAnalysisPage />} />
           <Route path="/정책추천" element={<PolicyRecommendationPage />} />
           <Route path="/정책관리" element={<PolicyManagementPage />} />
+          <Route path="/설정" element={<SettingsPage />} />
+          <Route path="*" element={<Navigate to="/대시보드" replace />} />
         </Routes>
       </main>
     </FilterProvider>
