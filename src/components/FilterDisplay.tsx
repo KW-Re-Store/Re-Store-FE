@@ -1,17 +1,21 @@
 import calendarIcon from "../assets/icons/calendar.svg";
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
+import { fetchTradeAreaDistricts } from "../api/client";
 import { useFilters } from "../context/FilterContext";
+import { useApi } from "../hooks/useApi";
 import Icon from "./Icon";
 
 type FilterDisplayProps = {
   editable?: boolean;
 };
 
-const dongOptions = ["전체 행정동", "상계10동", "상계9동", "하계1동", "상계6,7동", "월계2동"];
+const fallbackDongs = ["상계10동", "상계9동", "하계1동", "상계6·7동", "월계2동", "월계1동"];
 const yearOptions = ["2024년", "2023년", "2022년"];
 
 function FilterDisplay({ editable = false }: FilterDisplayProps) {
   const { region, dong, year, setRegion, setDong, setYear } = useFilters();
+  const districts = useApi((signal) => fetchTradeAreaDistricts(signal), []);
+  const dongOptions = ["전체 행정동", ...(districts.data ?? fallbackDongs)];
 
   if (editable) {
     return (
