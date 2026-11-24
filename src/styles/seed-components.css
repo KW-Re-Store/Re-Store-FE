@@ -1,0 +1,319 @@
+/*
+ * SEED Design 컴포넌트 패턴 적용 (seed-design.io)
+ * - ActionButton: brand-solid / neutral-weak, pressed 시 색 전환 + scale(0.97)
+ * - TextField / SelectBox: stroke-neutral-weak, focus 시 stroke-brand + focus ring
+ * - Badge: radius full, weak 배경 + 진한 전경색
+ * - Card(Layer): bg-layer-default + stroke-neutral-muted, shadow 최소화
+ * 브랜드 색상은 파랑(SEED blue)으로 재매핑되어 있습니다. → seed-tokens.css
+ */
+
+/* ---------- 레이아웃 / 레이어 ---------- */
+
+.sidebar {
+  background: var(--seed-color-bg-layer-default);
+  border-right: 1px solid var(--seed-color-stroke-neutral-muted);
+}
+
+.topbar {
+  background: var(--seed-color-bg-layer-default);
+  border-bottom: 1px solid var(--seed-color-stroke-neutral-muted);
+}
+
+.topbar h1 {
+  font-size: var(--seed-font-size-t9-static);
+  line-height: var(--seed-line-height-t9-static, 32px);
+  font-weight: var(--seed-font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.topbar p {
+  color: var(--seed-color-fg-neutral-subtle);
+  font-size: var(--seed-font-size-t3-static);
+}
+
+.panel,
+.pm-panel,
+.ta-card,
+.pr-sim-card,
+.pr-related-card,
+.pr-policy-card,
+.pm-kpi-card,
+.summary-card,
+.policy-panel,
+.risk-gauge {
+  border-color: var(--seed-color-stroke-neutral-muted);
+  border-radius: var(--seed-radius-r4);
+  box-shadow: none;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+}
+
+/* ---------- 내비게이션 (SEED: weak tint 선택 상태) ---------- */
+
+.nav-menu {
+  padding: var(--seed-dimension-x2) var(--seed-dimension-x3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--seed-dimension-x1);
+}
+
+.nav-menu a {
+  height: 40px;
+  padding: 0 var(--seed-dimension-x3);
+  border-radius: var(--seed-radius-r2_5);
+  font-size: var(--seed-font-size-t4-static);
+  font-weight: var(--seed-font-weight-medium);
+  transition:
+    background-color var(--seed-duration-color-transition) var(--seed-timing-function-easing),
+    color var(--seed-duration-color-transition) var(--seed-timing-function-easing);
+}
+
+.nav-menu a:hover {
+  background: var(--seed-color-bg-neutral-weak);
+}
+
+.nav-menu a.active {
+  color: var(--seed-color-fg-brand);
+  background: var(--seed-color-bg-brand-weak);
+  font-weight: var(--seed-font-weight-bold);
+}
+
+/* 아이콘 이미지를 SEED blue로 물들임 (기존: 흰색 반전) */
+.nav-menu a.active .icon {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(93%) saturate(2400%) hue-rotate(205deg) brightness(100%) contrast(96%);
+}
+
+/* ---------- ActionButton ---------- */
+
+.btn-primary,
+.btn-primary-block,
+.report-button,
+.btn-outline,
+.btn-block-outline,
+.pr-detail-btn,
+.pr-more-btn,
+.pr-related-more,
+.profile,
+.guide-button {
+  transition:
+    background-color var(--seed-duration-color-transition) var(--seed-timing-function-easing),
+    transform var(--seed-duration-d3) var(--seed-timing-function-pressed-scale);
+  cursor: pointer;
+}
+
+.btn-primary,
+.btn-primary-block,
+.report-button {
+  border: 0;
+  border-radius: var(--seed-radius-r2_5);
+  background: var(--seed-color-bg-brand-solid);
+  color: var(--seed-color-fg-on-brand-solid);
+  font-weight: var(--seed-font-weight-bold);
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary-block:hover,
+.report-button:hover {
+  background: var(--seed-color-bg-brand-solid-pressed);
+}
+
+.btn-outline,
+.btn-block-outline,
+.pr-detail-btn {
+  border: 1px solid var(--seed-color-stroke-neutral-weak);
+  border-radius: var(--seed-radius-r2_5);
+  background: var(--seed-color-bg-layer-default);
+  color: var(--seed-color-fg-neutral);
+  font-weight: var(--seed-font-weight-bold);
+}
+
+.btn-outline:hover,
+.btn-block-outline:hover,
+.pr-detail-btn:hover {
+  background: var(--seed-color-bg-layer-default-pressed);
+}
+
+.btn-primary:active,
+.btn-primary-block:active,
+.report-button:active,
+.btn-outline:active,
+.btn-block-outline:active,
+.pr-detail-btn:active,
+.pr-more-btn:active {
+  transform: scale(var(--seed-scale-s97));
+}
+
+.pr-more-btn {
+  border-radius: var(--seed-radius-r2_5);
+  color: var(--seed-color-fg-brand);
+}
+
+.pr-more-btn:hover {
+  background: var(--seed-color-bg-brand-weak);
+}
+
+/* ---------- TextField / SelectBox ---------- */
+
+.pm-form input,
+.pm-form select,
+.pm-exec-input,
+.pm-status,
+.filter-select {
+  border: 1px solid var(--seed-color-stroke-neutral-weak);
+  border-radius: var(--seed-radius-r2_5);
+  background: var(--seed-color-bg-layer-default);
+  color: var(--seed-color-fg-neutral);
+  transition: border-color var(--seed-duration-color-transition) var(--seed-timing-function-easing);
+}
+
+.pm-form input::placeholder {
+  color: var(--seed-color-fg-placeholder);
+}
+
+.pm-form input:focus,
+.pm-form select:focus,
+.pm-exec-input:focus,
+.pm-status:focus,
+.filter-select:focus-within {
+  outline: none;
+  border-color: var(--seed-color-stroke-brand-solid);
+  box-shadow: 0 0 0 3px var(--seed-color-bg-brand-weak);
+}
+
+:focus-visible {
+  outline: 2px solid var(--seed-color-stroke-focus-ring);
+  outline-offset: 2px;
+}
+
+.pm-form {
+  border-radius: var(--seed-radius-r3);
+  background: var(--seed-color-bg-neutral-muted);
+}
+
+/* ---------- Badge (radius full) ---------- */
+
+.badge,
+.ta-badge-risk,
+.pr-related-status,
+.pr-match,
+.pr-in-combo,
+.pm-count,
+.summary-change,
+.policy-item em,
+.cause-item small {
+  border-radius: var(--seed-radius-full);
+  font-weight: var(--seed-font-weight-bold);
+}
+
+.badge.danger,
+.ta-badge-risk {
+  border: 0;
+  background: var(--seed-color-bg-critical-weak);
+  color: var(--seed-color-fg-critical);
+}
+
+.badge.caution,
+.ta-badge-risk.grade-주의 {
+  border: 0;
+  background: var(--seed-color-palette-carrot-100);
+  color: var(--seed-color-palette-carrot-700);
+}
+
+.ta-badge-risk.grade-관심 {
+  border: 0;
+  background: var(--seed-color-bg-positive-weak);
+  color: var(--seed-color-fg-positive);
+}
+
+.pr-related-status.ok {
+  background: var(--seed-color-bg-positive-weak);
+  color: var(--seed-color-fg-positive);
+}
+
+.pr-related-status.review {
+  background: var(--seed-color-palette-carrot-100);
+  color: var(--seed-color-palette-carrot-700);
+}
+
+.pm-status {
+  border-radius: var(--seed-radius-full);
+}
+
+/* ---------- 상태 피드백 ---------- */
+
+.toast {
+  border-radius: var(--seed-radius-r3);
+  box-shadow: var(--seed-shadow-s3);
+  background: var(--seed-color-bg-neutral-solid);
+  font-size: var(--seed-font-size-t4-static);
+}
+
+.toast.error {
+  background: var(--seed-color-bg-critical-solid);
+}
+
+.api-status.connected {
+  color: var(--seed-color-fg-positive);
+}
+
+.api-status.offline {
+  color: var(--seed-color-fg-critical);
+}
+
+.api-status.loading {
+  color: var(--seed-color-fg-neutral-subtle);
+}
+
+/* 위험지수 블록: SEED critical solid */
+.ta-risk-block {
+  background: var(--seed-color-bg-critical-solid);
+}
+
+.ta-risk-block.grade-주의 {
+  background: var(--seed-color-palette-carrot-600);
+}
+
+.ta-risk-block.grade-관심 {
+  background: var(--seed-color-bg-positive-solid);
+}
+
+/* 표: SEED 리스트 스타일 (헤더 subtle, 구분선 muted) */
+table th {
+  color: var(--seed-color-fg-neutral-subtle);
+  font-weight: var(--seed-font-weight-medium);
+}
+
+table td {
+  border-color: var(--seed-color-stroke-neutral-muted);
+}
+
+table tbody tr {
+  transition: background-color var(--seed-duration-color-transition) var(--seed-timing-function-easing);
+}
+
+table tbody tr:hover {
+  background: var(--seed-color-bg-neutral-muted);
+}
+
+/* 상단 바: 상태 표시줄이 들어가도 제목이 잘리지 않도록 높이 자동 */
+.topbar {
+  height: auto;
+  min-height: 72px;
+  padding: var(--seed-dimension-x3) var(--seed-dimension-x6);
+}
+
+.topbar h1 {
+  margin: 0 0 2px;
+}
+
+.topbar p {
+  margin: 0;
+}
+
+.indicator-card span {
+  white-space: nowrap;
+  letter-spacing: -0.03em;
+}
