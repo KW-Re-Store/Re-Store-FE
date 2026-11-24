@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+
+import { fetchDashboard, type DashboardResponse, type RiskArea } from "../api/client";
 import alertTriangleIcon from "../assets/icons/alert-triangle.svg";
 import chartUpIcon from "../assets/icons/chart-up.svg";
 import chevronDownIcon from "../assets/icons/chevron-down.svg";
@@ -14,6 +17,7 @@ import reportIcon from "../assets/icons/report.svg";
 import sadFaceIcon from "../assets/icons/sad-face.svg";
 import userHomeIcon from "../assets/icons/user-home.svg";
 import Icon from "../components/Icon";
+import NowonRiskMap from "../components/NowonRiskMap";
 import FilterDisplay from "../components/FilterDisplay";
 import PanelTitle from "../components/PanelTitle";
 
@@ -56,16 +60,115 @@ const policyItems = [
   ["📈", "초기 창업자 성장 지원", "경영교육, 금융지원, 멘토링 프로그램", "일반"]
 ];
 
-const nowonMapUrl =
-  "https://www.openstreetmap.org/export/embed.html?bbox=127.045%2C37.615%2C127.115%2C37.705&layer=mapnik&marker=37.6542%2C127.0568";
+const fallbackAreas: RiskArea[] = riskRows.map(([rank, districtName, riskGrade, riskScore]) => ({
+  rank: Number(rank),
+  districtCode: "",
+  districtName,
+  riskGrade,
+  riskScore: Number(riskScore),
+  closureRate: 0,
+  closureRateChangePoint: 0,
+  salesChangeRate: 0,
+  footTrafficChangeRate: 0,
+  storeChangeRate: 0,
+  startupClosureRatio: 0,
+  overcrowdingRate: 0,
+  vacancyRate: 0,
+  causeType: "",
+  causeSummary: "",
+  recommendedPolicies: []
+}));
+
+const causeIcons = ["👥", "📊", "🏪", "🚀", "🏢"];
+const policyIcons = ["👥", "💼", "📈"];
+
+type ApiStatus = "loading" | "connected" | "offline";
+
+function formatSigned(value: number, unit: string) {
+  const arrow = value >= 0 ? "▲" : "▼";
+  return `${arrow} ${Math.abs(value)}${unit}`;
+}
 
 function DashboardPage() {
+  const [dashboard, setDashboard] = useState<DashboardResponse | null>(null);
+  const [apiStatus, setApiStatus] = useState<ApiStatus>("loading");
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    fetchDashboard(controller.signal)
+      .then((data) => {
+        setDashboard(data);
+        setApiStatus("connected");
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setApiStatus("offline");
+      });
+
+    return () => controller.abort();
+  }, []);
+
+  const summaryByKey = new Map(dashboard?.summary.map((metric) => [metric.key, metric]) ?? []);
+  const totalDistricts = summaryByKey.get("districts")?.value ?? 19;
+  const shareOf = (count: number) => `${((count / totalDistricts) * 100).toFixed(1)}%`;
+
+  const summaryKeys = ["districts", "highRiskAreas", "cautionAreas", "priorityPolicies", "averageRiskScore"];
+  const countKeys = new Set(["highRiskAreas", "cautionAreas", "priorityPolicies"]);
+  const cards = summaryCards.map((card, index) => {
+    const key = summaryKeys[index];
+    const metric = summaryByKey.get(key);
+    if (!metric) return card;
+    const trendArrow = metric.trend === "up" ? "▲" : metric.trend === "down" ? "▼" : "";
+    return {
+      ...card,
+      label: metric.label,
+      value: String(metric.value),
+      unit: metric.unit,
+      share: countKeys.has(key) ? shareOf(metric.value) : undefined,
+      note: metric.note,
+      change: trendArrow || undefined,
+      changeTone: metric.trend
+    };
+  });
+
+  const rows = dashboard
+    ? dashboard.topRiskAreas.map((area) => [String(area.rank), area.districtName, area.riskGrade, area.riskScore.toFixed(1)])
+    : riskRows;
+
+  const causeList = dashboard
+    ? dashboard.causes.map((cause, index) => ({ ...cause, icon: causeIcons[index] ?? "•" }))
+    : causes;
+
+  const indicatorByLabel = new Map(dashboard?.indicators.map((metric) => [metric.label, metric]) ?? []);
+  const indicatorList = indicators.map(([label, value, change]) => {
+    const metric = indicatorByLabel.get(label);
+    return metric ? [label, `${metric.value}${metric.unit}`, change] : [label, value, change];
+  });
+
+  const policies = dashboard
+    ? dashboard.policyRecommendations.map((item, index) => [
+        policyIcons[index] ?? "•",
+        `${item.districtName} · ${item.causeType}`,
+        item.policies.join(", "),
+        item.priority
+      ])
+    : policyItems;
+
+  const averageScore = dashboard?.averageRiskScore.value ?? 56.7;
+  const averageChange = dashboard ? formatSigned(dashboard.averageRiskScore.changePoint, "점") : "▼ 3.5점";
+
   return (
     <section className="workspace">
       <header className="topbar">
         <div>
           <h1>상권 현황 한눈에 보기</h1>
           <p>행정동별 상권 위험도와 주요 지표를 한눈에 확인하고 정책 대상 지역을 선정하세요.</p>
+          <span className={`api-status ${apiStatus}`}>
+            {apiStatus === "connected" && "● API 연결됨"}
+            {apiStatus === "loading" && "● API 연결 중…"}
+            {apiStatus === "offline" && "● API 오프라인 · 기본 데이터 표시"}
+          </span>
         </div>
         <div className="filters">
           <FilterDisplay editable />
@@ -84,7 +187,7 @@ function DashboardPage() {
       <div className="content-grid">
         <section className="main-column">
           <div className="summary-row">
-            {summaryCards.map((card) => (
+            {cards.map((card) => (
               <article className={`summary-card ${card.tone}`} key={`${card.label}-${card.tone}`}>
                 <img className="folder-tab" src={card.folderIcon} alt="" />
                 <div className="summary-body">
@@ -123,9 +226,12 @@ function DashboardPage() {
                 <span>
                   <i className="risk-green" /> 관심
                 </span>
+                <span>
+                  <i className="risk-none" /> 데이터 없음
+                </span>
               </div>
               <div className="map">
-                <iframe title="노원구 지도" src={nowonMapUrl} loading="lazy" />
+                <NowonRiskMap areas={dashboard?.areas ?? fallbackAreas} />
                 <a
                   className="map-link"
                   href="https://www.openstreetmap.org/relation/2297417"
@@ -149,7 +255,7 @@ function DashboardPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {riskRows.map(([rank, area, grade, score]) => (
+                  {rows.map(([rank, area, grade, score]) => (
                     <tr key={area}>
                       <td>{rank}</td>
                       <td>{area}</td>
@@ -167,7 +273,7 @@ function DashboardPage() {
           <article className="panel cause-panel">
             <PanelTitle title="원인 분석 요약" subtitle="노원구 전체" />
             <div className="cause-list">
-              {causes.map((cause) => (
+              {causeList.map((cause) => (
                 <div className="cause-item" key={cause.label}>
                   <span>{cause.icon}</span>
                   <strong>{cause.label}</strong>
@@ -187,18 +293,18 @@ function DashboardPage() {
             </h2>
             <div className="gauge">
               <strong>
-                56.7<small>/100</small>
+                {averageScore}<small>/100</small>
               </strong>
             </div>
             <p>
-              전년도 대비 <b>▼ 3.5점</b>
+              전년도 대비 <b>{averageChange}</b>
             </p>
           </article>
 
           <article className="panel indicators-panel">
             <PanelTitle title="주요 지표" />
             <div className="indicator-grid">
-              {indicators.map(([label, value, change]) => (
+              {indicatorList.map(([label, value, change]) => (
                 <div className="indicator-card" key={label}>
                   <span>{label}</span>
                   <strong>{value}</strong>
@@ -213,7 +319,7 @@ function DashboardPage() {
           <article className="policy-panel">
             <PanelTitle title="정책 추천 TOP 3" action="전체보기 ›" />
             <div className="policy-list">
-              {policyItems.map(([icon, title, desc, grade]) => (
+              {policies.map(([icon, title, desc, grade]) => (
                 <div className="policy-item" key={title}>
                   <span>{icon}</span>
                   <div>
